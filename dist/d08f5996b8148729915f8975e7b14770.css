@@ -12,19 +12,25 @@ body {
   color: #4c4c4c;
   background: #f8f8f8;
 }
-h1,
-p {
-  color: white;
-}
 h1 {
   line-height: .55;
   text-shadow: 0 1px 0 rgba(0,0,0, .4);
+  color: white;
 }
 h2 {
   margin-top: 0;
 }
+h3 {
+  color: #922786;
+}
+h4 {
+  color: black;
+  font-weight: lighter;
+  display: inline-block;
+}
 p {
   font-size: 1.1em;
+  color: #bebbc6;
 }
 ul {
   list-style: none;
@@ -42,7 +48,7 @@ ul input[type="text"] {
   width: 25%;
   height: 29px;
 }
-ul li {
+ ul li {
   display: inline-block;
   padding: 2em;
 }
@@ -58,9 +64,30 @@ button {
   cursor: pointer;
   text-transform: uppercase;
 }
-header {
+nav {
   height: 85px;
   background: white;
+}
+header h3 {
+  margin-left: 8.25em;
+  margin-bottom: 0;
+}
+header p {
+  font-size: 0.7em;
+  margin-top: 0;
+  margin-left: 3.5em;
+  display: inline-block;
+}
+select {
+  -webkit-box-shadow: 0 2px 2px rgba(0,0,0, .06);
+          box-shadow: 0 2px 2px rgba(0,0,0, .06);
+  padding: 0 0.6em;
+  border: none;
+  border-radius: 5em;
+  outline: none;
+  height: 2em;
+  width: 30%;
+  background-color: white;
 }
 .clearfix {
   content: "";
@@ -90,13 +117,17 @@ header {
   height: 800px;
 }
 .sidebar {
-  min-height: 100%;
-  padding: 0;
+  min-height: 900px;
+  padding-left: 0;
+  padding-top: 3em;
   background: white;
   text-align: center;
 }
 .sidebar > li {
   font-size: 0.7em;
+  font-weight: lighter;
+  padding: 1.75em;
+  display: block;
 }
 .dashboard {
   width: 90%;
@@ -124,5 +155,81 @@ header {
 }
 .last-child {
   width: 30%;
+}
+.modules-button {
+  float: right;
+  background-color: #922786;
+  margin-top: 0;
+  margin-right: 3.75em;
+  position: relative;
+  bottom: 1.5em;
+}
+.generic-button {
+  background-color: white;
+  -webkit-box-shadow: 0 3px 5px rgba(0,0,0, .04);
+          box-shadow: 0 3px 5px rgba(0,0,0, .04);
+  color: black;
+  border: none;
+  border-radius: 2em;
+  outline: none;
+  float: right;
+  position: relative;
+  right: 2em;
+  top: 17em;
+}
+.withhold-button {
+  background-color: white;
+  -webkit-box-shadow: 0 3px 5px rgba(0,0,0, .04);
+          box-shadow: 0 3px 5px rgba(0,0,0, .04);
+  color: black;
+  border: none;
+  border-radius: 2em;
+  outline: none;
+}
+.change-pin-button {
+  background-color: #922786;
+}
+.panel h3 {
+  color: black;
+  font-weight: lighter;
+  text-transform: capitalize;
+}
+.view-button {
+  background-color: white;
+  -webkit-box-shadow: 0 3px 5px rgba(0,0,0, .04);
+          box-shadow: 0 3px 5px rgba(0,0,0, .04);
+  color: black;
+  border: none;
+  border-radius: 2em;
+  outline: none;
+}
+.card-button {
+  float: right;
+  position: relative;
+  top: 12em;
+  right: 0.5em;
+}
+.cards {
+  float: right;
+  margin-right: 1.75em;
+  position: relative;
+  bottom: 3.5em;
+}
+.year-links {
+  float: right;
+  margin-right: 0.75em;
+  position: relative;
+  bottom: 3.75em;
+}
+
+.year-links > h4 {
+  padding-right: 8px;
+  text-transform: capitalize;
+}
+
+.active {
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+  color: #922786;
 }
 
