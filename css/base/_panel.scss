@@ -1,0 +1,41 @@
+.dashboard {
+  width: 90%;
+  float: left;
+}
+
+.cards {
+  float: right;
+  margin-right: 1.75em;
+  position: relative;
+  bottom: 3.5em;
+}
+
+.panel {
+  border-radius: 5px;
+  float: left;
+  width: 42%;
+  background: white;
+  box-shadow: 0 0 26px rgba(0,0,0, .13);
+  height: 350px;
+  margin: 1.5em;
+}
+.panel h3 {
+  color: black;
+  font-weight: lighter;
+  text-transform: capitalize;
+  display: flex;
+  margin-left: 1em;
+}
+.panel:first-child {
+  margin-left: 2.5em;
+}
+.bottom {
+  width: 24%;
+  text-align: center;
+}
+.first-child {
+  margin-left: 2.5em;
+}
+.last-child {
+  width: 30%;
+}

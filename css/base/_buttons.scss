@@ -1,0 +1,61 @@
+.btn {
+  @include bg-colors($ui-colors);
+}
+
+[class^="btn--"] {
+  @extend %btn;
+}
+
+.btn--info {
+  color: $black;
+}
+
+.modules-button {
+  float: right;
+  margin-top: 0;
+  margin-right: 3.75em;
+  position: relative;
+  bottom: 1.5em;
+}
+.details-button {
+  float: right;
+  position: relative;
+  right: 2em;
+  top: 16.5em;
+}
+
+.card-button {
+  float: right;
+  position: relative;
+  top: 10.5em;
+  right: 0.5em;
+}
+
+.view-button {
+  position: relative;
+  top: 10em;
+}
+
+.last-child {
+  button {
+    margin-top: 5.5em;
+  }
+}
+
+.year-links {
+  float: right;
+  margin-right: 0.75em;
+  position: relative;
+  bottom: 3.75em;
+}
+
+.year-links > h4 {
+  padding-right: 8px;
+  text-transform: capitalize;
+}
+
+.active {
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+  color: $plum;
+}

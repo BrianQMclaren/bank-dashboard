@@ -1,0 +1,30 @@
+// Colors
+
+$purple: #3b2b6e;
+$plum: #922786;
+$pink: #eb4888;
+$blue: #10a2f5;
+$background: #f8f8f8;
+$grey: #bebbc6;
+$darkGrey: #66646c;
+$white: #fff;
+$black: #1b1b1b;
+
+// Font Weights
+
+$font-weight--thin: 100;
+$font-weight--light: 300;
+$font-weight--regular: 400;
+$font-weight--medium: 500;
+$font-weight--bold: 700;
+$font-weight--ultra-bold: 900;
+
+// UI Colors
+
+$ui-colors: (
+	default : $purple,
+	success : $plum,
+	error : $black,
+	info : $white,
+	warning: $blue
+);

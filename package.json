@@ -5,10 +5,8 @@
   "main": "app.js",
   "author": "Brian McLaren",
   "license": "MIT",
-  "dependencies": {
-    "autoprefixer": "^7.2.5",
-    "postcss": "^6.0.16",
-    "postcss-hexrgba": "^1.0.0",
-    "postcss-simple-vars": "^4.1.0"
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.8.3"
   }
 }
