@@ -37,9 +37,16 @@ p {
   font-size: 1.1em;
   color: $grey;
 }
+nav {
+  text-align: center;
+  padding: 1em;
+}
 ul {
   list-style: none;
-  margin: 0;
+  padding: 0;
+}
+ul li {
+  padding: .5em;
 }
 ul input[type="text"] {
   box-shadow: 0 3px 5px rgba(0,0,0, .04);
@@ -48,14 +55,10 @@ ul input[type="text"] {
   border: none;
   border-radius: 2em;
   outline: none;
-  margin-right: 16em;
-  width: 25%;
   height: 29px;
+  margin-bottom: 1em;
 }
- ul li {
-  display: inline-block;
-  padding: 1.5em;
-}
+
 button {
   outline: none;
   background-color: $purple;
@@ -68,20 +71,16 @@ button {
   cursor: pointer;
   text-transform: uppercase;
 }
-nav {
-  height: 85px;
-  background: white;
-}
-
-header h3 {
-  margin-left: 8.25em;
-  margin-bottom: 0;
-}
 header p {
   font-size: 0.7em;
   margin-top: 0;
   margin-left: 3.5em;
   display: inline-block;
+}
+header {
+  h3 {
+    text-align: center;
+  }
 }
 select {
   box-shadow: 0 2px 2px rgba(0,0,0, .06);
@@ -100,9 +99,56 @@ select {
 .wrapper {
   width: 100%;
   max-width: 1150px;
-  margin: 2.5em auto;
   border-radius: .35em;
   overflow: hidden;
   background: $background;
   box-shadow: 0 0 26px rgba(0,0,0, .13);
+}
+
+
+@media (min-width: 450px) {
+  .wrapper {
+    margin: 0;
+  }
+  ul input[type="text"] {
+    width: 100%;
+  }
+  header {
+    h3 {
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+  }
+  nav {
+    height: auto;
+    text-align: center;
+  }
+  ul input[type="text"] {
+    margin-right: 16em;
+  }
+}
+
+@media (min-width: 860px) {
+  header h3 {
+    text-align: left;
+    margin-left: 8.25em;
+    margin-bottom: 0;
+  }
+  ul {
+    margin: 0;
+    li {
+      display: inline-block;
+      padding: 1.5em;
+    }
+  }
+ ul input[type="text"] {
+   width: 25%;
+ }
+ nav {
+   height: 85px;
+   background: white;
+ }
+ .wrapper {
+   margin: 2.5em auto;
+ }
 }

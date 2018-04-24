@@ -1,11 +1,8 @@
 .side-menu {
   display: flex;
   flex-direction: column;
-  float: left;
-  width: 10%;
-  height: 800px;
+
   .sidebar {
-    min-height: 900px;
     padding-left: 0;
     padding-top: 3em;
     background: white;
@@ -16,5 +13,27 @@
     font-weight: lighter;
     padding: 1.75em;
     display: block;
+  }
+}
+
+@media (min-width: 450px) {
+  .side-menu {
+    float: none;
+    width: 100%;
+    height: auto;
+    .sidebar {
+      min-height: 0;
+    }
+  }
+}
+
+@media (min-width: 860px) {
+  .side-menu {
+    float: left;
+    width: 10%;
+    height: 800px;
+    .sidebar {
+      min-height: 900px;
+    }
   }
 }
