@@ -71,6 +71,10 @@ button {
   cursor: pointer;
   text-transform: uppercase;
 }
+button, select {
+  background: none;
+  border: none;
+}
 header p {
   font-size: 0.7em;
   margin-top: 0;
@@ -81,15 +85,6 @@ header {
   h3 {
     text-align: center;
   }
-}
-select {
-  box-shadow: 0 2px 2px rgba(0,0,0, .06);
-  margin-top: 1em;
-  border: none;
-  border-radius: 5em;
-  outline: none;
-  height: 1.5em;
-  background-color: white;
 }
 .clearfix {
   content: "";

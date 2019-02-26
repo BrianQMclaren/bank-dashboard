@@ -45,43 +45,74 @@
       <p>You are in the main panel</p>
       <button class="btn--success modules-button" type="button" name="button">Add Modules</button>
     </header>
-    <section class="dashboard">
-      <div class="panel">
+
+    <section>
+      <div class="top-dashboard">
+        <div class="panel">
         <h3>summary</h3>
+        <p>balance</p>
+        <p class="balance">10 346,78 PLN</p>
         <button class="btn--info details-button" type="button" name="button">More Details</button>
       </div>
       <div class="panel">
         <h3>your cards</h3>
-        <select class="cards" name="cards">
-          <option value="">**** **** **** 0789</option>
-        </select>
+        <h3 class="name">Tomasz Kowalski</h3>
+        <ul>
+          <li>Card:</li>
+          <li>Card Type:</li>
+          <li>Account:</li>
+          <li>Card Number:</li>
+          <li>Expiry date:</li>
+          <li>Status:</li>
+          <li>Blocked:</li>
+          <li>Debit</li>
+          <li>Debit MasterCard PayPass</li>
+          <li>Saving Account</li>
+          <li>687676******0789</li>
+          <li>31.03.2019</li>
+          <li>Active</li>
+          <li>743.00 PLN</li>
+        </ul>
+        <p><a href="" class="more-details">More Details</a></p>
+        <div class="cards">
+          <select>
+            <option value="">**** **** **** 0789</option>
+          </select>
+        </div>
+        
         <div class="card-button">
           <button class="btn--info" type="button" name="button">Withhold Card</button>
           <button class="btn--success" type="button" name="button">Change Pin</button>
         </div>
       </div>
+    </div>
+
+    <div class="bottom-dashboard">
       <div class="panel bottom first-child">
-        <h3>history</h3>
-        <div class="year-links">
+        <div class="history">
+          <h4>History</h4>
           <h4 class="active">today</h4>
           <h4>yesterday</h4>
         </div>
           <button class="btn--info view-button" type="button" name="button">View More</button>
       </div>
       <div class="panel bottom">
-        <h3>charges</h3>
-        <div class="year-links">
+        <div class="charges">
+          <h4>Charges</h4>
           <h4 class="active">week</h4>
           <h4>month</h4>
         </div>
         <button class="btn--info view-button" type="button" name="button">More Details</button>
       </div>
       <div class="panel bottom last-child">
-        <h3>messages</h3>
+        <h4>Messages</h4>
         <button class="btn--info view-button" type="button" name="button">View More</button>
       </div>
-    </section></div>
-  
+    </div>
+
+    </section>
+
+    </div>
   <script src="/app.e623f3da.js" type="text/javascript"></script>
 </body>
 </html>
