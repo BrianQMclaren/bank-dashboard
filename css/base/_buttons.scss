@@ -11,21 +11,25 @@
 }
 
 .details-button {
- align-self: flex-end;
+  align-self: flex-end;
+  margin-top: auto;
 }
-
-.cards {
-   border-radius: 20px;
-   font-size: 16px;
-   box-shadow: 0 3px 2px rgba(0,0,0, .06);
-   outline: none;
-   height: 1.5em;
-   background-color: white;
-   align-self: flex-end;
-}
-
 .view-button {
-  width: 50%;
+  margin-top: auto;
+}
+.cards {
+  border-radius: 20px;
+  font-size: 16px;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.06);
+  outline: none;
+  background-color: white;
+  align-self: center;
+  margin: 0.75em 1em;
+  padding: 0.25em;
+}
+.card-button {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .year-links {
@@ -46,7 +50,6 @@
 }
 
 @media (min-width: 450px) {
-
 }
 
 @media (min-width: 860px) {

@@ -1,11 +1,7 @@
-
-
-
 .panel {
   border-radius: 5px;
   background: white;
-  box-shadow: 0 0 26px rgba(0,0,0, .13);
-  height: 350px;
+  box-shadow: 0 0 26px rgba(0, 0, 0, 0.13);
   margin: 1em;
   display: flex;
   flex-direction: column;
@@ -14,7 +10,6 @@
     font-weight: 400;
     font-size: 1em;
     text-transform: capitalize;
-    display: flex;
     margin-left: 1em;
     padding-top: 0.25em;
   }
@@ -45,15 +40,13 @@
   display: inline-block;
 }
 .panel .balance {
-  margin-left: .75em;
+  margin-left: 0.75em;
   font-size: 1.25em;
-  
 }
 .panel .balance::before {
   content: "\2022";
   color: $purple;
   margin-right: 0.25em;
-  
 }
 .top-dashboard {
   display: grid;
@@ -69,13 +62,28 @@
 }
 .panel .name {
   font-size: 1.25em;
-  padding: 0;
-  margin: 0.75em;
+  padding: 1em 0;
+  margin: 0 0.75em 0.75em;
+  border-bottom: 0.02px solid lightgray;
+  width: 55%;
 }
 .panel .history,
 .panel .charges {
   display: flex;
-  justify-content: space-evenly; 
+  justify-content: space-evenly;
+}
+.cards-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5em;
+}
+.acc-options {
+  display: flex;
+  justify-content: space-between;
+}
+.more-details {
+  padding-left: 1.5em;
 }
 @media (min-width: 450px) {
   .top-dashboard {
@@ -85,6 +93,7 @@
   .bottom-dashboard {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
+    height: calc(50vh);
   }
 }
 
