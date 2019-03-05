@@ -71,6 +71,7 @@
 .panel .charges {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 .cards-header {
   display: flex;
@@ -85,6 +86,29 @@
 .more-details {
   padding-left: 1.5em;
 }
+.transactions {
+  width: 90%;
+}
+.transactions .row {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin-bottom: 0.6em;
+}
+.transactions p,
+.msg-board p {
+  font-size: 0.7em;
+  text-align: left;
+  margin: 0.75em;
+}
+.msg-board {
+  margin: 0 auto;
+  width: 90%;
+  .row {
+    display: flex;
+  }
+}
+
 @media (min-width: 450px) {
   .top-dashboard {
     grid-template-columns: repeat(2, 1fr);

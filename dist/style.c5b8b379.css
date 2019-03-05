@@ -556,12 +556,12 @@ header h3 {
   margin-top: auto; }
 
 .view-button {
-  margin-top: auto; }
+  margin: auto; }
 
 .cards {
   border-radius: 20px;
   font-size: 16px;
-  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.09);
   outline: none;
   background-color: white;
   align-self: center;
@@ -692,7 +692,8 @@ header h3 {
 .panel .history,
 .panel .charges {
   display: flex;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  flex-wrap: wrap; }
 
 .cards-header {
   display: flex;
@@ -706,6 +707,27 @@ header h3 {
 
 .more-details {
   padding-left: 1.5em; }
+
+.transactions {
+  width: 90%; }
+
+.transactions .row {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin-bottom: 0.6em; }
+
+.transactions p,
+.msg-board p {
+  font-size: 0.7em;
+  text-align: left;
+  margin: 0.75em; }
+
+.msg-board {
+  margin: 0 auto;
+  width: 90%; }
+  .msg-board .row {
+    display: flex; }
 
 @media (min-width: 450px) {
   .top-dashboard {
