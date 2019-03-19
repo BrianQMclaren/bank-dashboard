@@ -18,7 +18,7 @@ class App extends React.Component {
                 Money Transfer
               </button>
               <li>Hello Brian</li>
-              <li>Notifitcations</li>
+              <li>Notifications</li>
               <li>Logout</li>
             </ul>
           </nav>
