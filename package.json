@@ -16,7 +16,11 @@
     "react-dom": "15.x || 16.x || 16.4.0-alpha.0911da3"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "eslint": "^5.15.3",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-import": "^2.16.0",

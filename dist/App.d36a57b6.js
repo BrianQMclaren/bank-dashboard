@@ -28343,6 +28343,8 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _router = require("@reach/router");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -28369,23 +28371,42 @@ function (_React$Component) {
   _inherits(Navigation, _React$Component);
 
   function Navigation() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    var _temp;
+
     _classCallCheck(this, Navigation);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Navigation).apply(this, arguments));
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Navigation)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.state = {
+      query: ""
+    }, _this.handleSearchTerm = function (event) {
+      _this.setState({
+        query: event.target.value
+      });
+    }, _temp));
   }
 
   _createClass(Navigation, [{
     key: "render",
     value: function render() {
       return _react.default.createElement("nav", null, _react.default.createElement("ul", null, _react.default.createElement("input", {
+        onChange: this.handleSearchTerm,
         type: "text",
-        name: "search",
-        value: "Search"
-      }), _react.default.createElement("button", {
+        value: this.state.query,
+        placeholder: "Search"
+      }), _react.default.createElement(_router.Link, {
+        to: "/account"
+      }, _react.default.createElement("button", {
         className: "btn--default",
         type: "button",
         name: "button"
-      }, "Money Transfer"), _react.default.createElement("li", null, "Hello Brian"), _react.default.createElement("li", null, "Notifications"), _react.default.createElement("li", null, "Logout")));
+      }, "Money Transfer")), _react.default.createElement("li", null, "Hello Brian"), _react.default.createElement("li", null, "Notifications"), _react.default.createElement("li", null, "Logout")));
     }
   }]);
 
@@ -28394,7 +28415,7 @@ function (_React$Component) {
 
 var _default = Navigation;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"Menu.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","@reach/router":"../node_modules/@reach/router/es/index.js"}],"Menu.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28406,62 +28427,27 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-var Menu =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(Menu, _React$Component);
-
-  function Menu() {
-    _classCallCheck(this, Menu);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(Menu).apply(this, arguments));
-  }
-
-  _createClass(Menu, [{
-    key: "render",
-    value: function render() {
-      return _react.default.createElement("section", {
-        className: "side-menu"
-      }, _react.default.createElement("aside", null, _react.default.createElement("ul", {
-        className: "sidebar"
-      }, _react.default.createElement("i", {
-        className: "fas fa-home"
-      }), _react.default.createElement("li", null, "Dashboard"), _react.default.createElement("i", {
-        className: "fas fa-briefcase"
-      }), _react.default.createElement("li", null, "Accounts"), _react.default.createElement("i", {
-        className: "fas fa-money-bill-alt"
-      }), _react.default.createElement("li", null, "Savings"), _react.default.createElement("i", {
-        className: "fas fa-credit-card"
-      }), _react.default.createElement("li", null, "Cards"), _react.default.createElement("i", {
-        className: "fas fa-archive"
-      }), _react.default.createElement("li", null, "Loans"), _react.default.createElement("i", {
-        className: "fas fa-chart-line"
-      }), _react.default.createElement("li", null, "Investments"), _react.default.createElement("i", {
-        className: "fas fa-file-alt"
-      }), _react.default.createElement("li", null, "Contacts"))));
-    }
-  }]);
-
-  return Menu;
-}(_react.default.Component);
+var Menu = function Menu(props) {
+  return _react.default.createElement("section", {
+    className: "side-menu"
+  }, _react.default.createElement("aside", null, _react.default.createElement("ul", {
+    className: "sidebar"
+  }, _react.default.createElement("i", {
+    className: "fas fa-home"
+  }), _react.default.createElement("li", null, props.home), _react.default.createElement("i", {
+    className: "fas fa-briefcase"
+  }), _react.default.createElement("li", null, props.savings), _react.default.createElement("i", {
+    className: "fas fa-money-bill-alt"
+  }), _react.default.createElement("li", null, props.bills), _react.default.createElement("i", {
+    className: "fas fa-credit-card"
+  }), _react.default.createElement("li", null, props.credit), _react.default.createElement("i", {
+    className: "fas fa-archive"
+  }), _react.default.createElement("li", null, props.loans), _react.default.createElement("i", {
+    className: "fas fa-chart-line"
+  }), _react.default.createElement("li", null, props.invest), _react.default.createElement("i", {
+    className: "fas fa-file-alt"
+  }), _react.default.createElement("li", null, props.contact))));
+};
 
 var _default = Menu;
 exports.default = _default;
@@ -28698,7 +28684,15 @@ function (_React$Component) {
     value: function render() {
       return _react.default.createElement("div", {
         className: "wrapper"
-      }, _react.default.createElement(_Navigation.default, null), _react.default.createElement(_Menu.default, null), _react.default.createElement(_Header.default, null), _react.default.createElement(_Panels.default, null));
+      }, _react.default.createElement(_Navigation.default, null), _react.default.createElement(_Menu.default, {
+        home: "home",
+        savings: "savings",
+        bills: "bills",
+        credit: "credit",
+        loans: "loans",
+        invest: "investments",
+        contact: "contacts"
+      }), _react.default.createElement(_Header.default, null), _react.default.createElement(_Panels.default, null));
     }
   }]);
 
@@ -28812,7 +28806,7 @@ function (_React$Component) {
       }, "D3Bank Dashboard")), _react.default.createElement(_router.Router, null, _react.default.createElement(_Dashboard.default, {
         path: "/"
       }), _react.default.createElement(_Account.default, {
-        path: "/account/:id"
+        path: "/account"
       })));
     }
   }]);
@@ -28820,7 +28814,7 @@ function (_React$Component) {
   return App;
 }(_react.default.Component);
 
-(0, _reactDom.render)(_react.default.createElement(App), document.getElementById("root"));
+(0, _reactDom.render)(_react.default.createElement(App, null), document.getElementById("root"));
 },{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","@reach/router":"../node_modules/@reach/router/es/index.js","./Dashboard":"Dashboard.js","./Account":"Account.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -28849,7 +28843,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64239" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65431" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

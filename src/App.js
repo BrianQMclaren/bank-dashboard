@@ -13,11 +13,11 @@ class App extends React.Component {
         </header>
         <Router>
           <Dashboard path="/" />
-          <Account path="/account/:id" />
+          <Account path="/account" />
         </Router>
       </div>
     );
   }
 }
 
-render(React.createElement(App), document.getElementById("root"));
+render(<App />, document.getElementById("root"));
