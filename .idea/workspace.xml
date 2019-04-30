@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1b26f9ec-0d54-4fd5-9115-4b8af87ddf7e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.cache/00/4e01e89502ea97c89aee3049d1b44d.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/00/4e01e89502ea97c89aee3049d1b44d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/01/69668a6902a2e24819932aa83df20c.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/01/69668a6902a2e24819932aa83df20c.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/01/880bcbbe78771d92809fa56a6883f1.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/01/880bcbbe78771d92809fa56a6883f1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/09/f0a6366c640230aa0acac06c12cf76.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/09/f0a6366c640230aa0acac06c12cf76.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/0b/b614368356ae994e7ff710538dd4de.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/0b/b614368356ae994e7ff710538dd4de.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/0d/b7cc93391bcb28d835f89657ebe695.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/0d/b7cc93391bcb28d835f89657ebe695.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/10/b58511974194df0dd015c66b0e7b23.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/10/b58511974194df0dd015c66b0e7b23.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/1e/8dcc109cbcd57142920435d0396fbb.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/1e/8dcc109cbcd57142920435d0396fbb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/22/862c17c25b31714c4ef56bb5b4353e.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/22/862c17c25b31714c4ef56bb5b4353e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/24/c07bf47bff1c465bc4e5cadbf2b847.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/24/c07bf47bff1c465bc4e5cadbf2b847.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/32/96f08cd8d4670d499660eeb360ab2b.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/32/96f08cd8d4670d499660eeb360ab2b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/35/cbb83fc1f0b6ef926caa8934d685ef.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/35/cbb83fc1f0b6ef926caa8934d685ef.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/38/38054b9fd90d2d6b1dcb83a0721cdf.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/38/38054b9fd90d2d6b1dcb83a0721cdf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/4a/b9f39118467ffac42eb5810087d696.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/4a/b9f39118467ffac42eb5810087d696.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/52/33bd47f6080490d50b2702102812a0.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/52/33bd47f6080490d50b2702102812a0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/53/0d9c9f35a9f227595d80f6f8fd1372.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/53/0d9c9f35a9f227595d80f6f8fd1372.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/53/a0e17816a3d416cb9a991d7d1cd2c2.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/53/a0e17816a3d416cb9a991d7d1cd2c2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/56/2ea2e90934fd7ebecb6ed991ccb806.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/56/2ea2e90934fd7ebecb6ed991ccb806.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/69/6085b5ad2442cc188cd3405262cf20.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/69/6085b5ad2442cc188cd3405262cf20.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/69/d86ec7722e9bc4e2f79de36696d7fd.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/69/d86ec7722e9bc4e2f79de36696d7fd.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/74/5eec534a17ec50a37137a5982fdc22.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/74/5eec534a17ec50a37137a5982fdc22.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/7b/3a8959c1c4a77c933a85d850635e95.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/7b/3a8959c1c4a77c933a85d850635e95.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/7e/cde642cfa937ca72696448e258b7ff.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/7e/cde642cfa937ca72696448e258b7ff.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/7e/ede2dbb559306ee5db6cac44291ef4.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/7e/ede2dbb559306ee5db6cac44291ef4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/94/f2174259069489d2ac78594612a5ad.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/94/f2174259069489d2ac78594612a5ad.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/99/99fca50ab945e4530e00e303cfae9e.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/99/99fca50ab945e4530e00e303cfae9e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/9c/b23b0861264654e8262284a063fce0.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/9c/b23b0861264654e8262284a063fce0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/a2/c388197d20920862638d95c26915f5.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/a2/c388197d20920862638d95c26915f5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/b2/a64a26f0792a60ce28957675a249b4.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/b2/a64a26f0792a60ce28957675a249b4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/b8/d238a65ff2517d891058885ac271c7.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/b8/d238a65ff2517d891058885ac271c7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/d0/927fb0d9cf047c08bdb5b9a85f4fb4.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/d0/927fb0d9cf047c08bdb5b9a85f4fb4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/d1/b5a3114c55093fe521685d14cb4461.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/d1/b5a3114c55093fe521685d14cb4461.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/d9/8eb1729d30378348c8ffb7a8b64586.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/d9/8eb1729d30378348c8ffb7a8b64586.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/e0/2ac9944396f025397e1ba5da137e45.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/e0/2ac9944396f025397e1ba5da137e45.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/ec/d2c48ca5908ba84d7c108403c76abd.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/ec/d2c48ca5908ba84d7c108403c76abd.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/ef/c575109adf2b9de5d64289a24af11b.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/ef/c575109adf2b9de5d64289a24af11b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/f0/8e2a98f402c1d018aa1940a2d6d9bb.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/f0/8e2a98f402c1d018aa1940a2d6d9bb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/fa/1d8b08d956d3089e44146548d83c23.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/fa/1d8b08d956d3089e44146548d83c23.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/App.d36a57b6.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/App.d36a57b6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/App.d36a57b6.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/App.d36a57b6.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/style.6b54f5b7.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/style.6b54f5b7.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/style.6b54f5b7.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/style.6b54f5b7.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/style.6b54f5b7.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/style.6b54f5b7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/style.6b54f5b7.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/style.6b54f5b7.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Account.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dashboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Navigation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/base/_panel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/base/_panel.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-306">
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/LineChart.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/d3 Fundamentals/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-949">
+              <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="6" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/img/dashboard.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DonutChart.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1596">
+              <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Panels.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="121">
+              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="c5b14744-d5c2-4dc5-80bb-a9ea889d6864" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/DonutChart.jsx" />
+        <option value="$PROJECT_DIR$/src/Panels.jsx" />
+        <option value="$PROJECT_DIR$/src/LineChart.jsx" />
+      </list>
+    </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/dashboard.iml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+        <option value="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="13" />
+    <option name="y" value="23" />
+    <option name="width" value="1267" />
+    <option name="height" value="707" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dashboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dashboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dashboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="NewWatcherDialog.advanced.open" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1b26f9ec-0d54-4fd5-9115-4b8af87ddf7e" name="Default Changelist" comment="" />
+      <created>1556300849337</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1556300849337</updated>
+      <workItem from="1556300852408" duration="2141000" />
+      <workItem from="1556637148590" duration="70000" />
+      <workItem from="1556637320788" duration="559000" />
+      <workItem from="1556638187323" duration="6512000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="9282000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="13" y="23" width="1267" height="707" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24979855" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5004029" side_tool="true" weight="0.32931036" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4995971" visible="true" weight="0.28448275" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.babelrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DonutChart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintrc.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Dashboard.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306">
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DonutChart.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1596">
+          <caret line="72" column="26" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Panels.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/dashboard.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/d3 Fundamentals/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-949">
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LineChart.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

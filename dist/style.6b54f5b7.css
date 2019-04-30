@@ -746,6 +746,19 @@ header h3 {
     border-bottom: none;
     align-items: center; }
 
+circle {
+  fill: #922786;
+  stroke: #922786; }
+
+.line-chart {
+  fill: none;
+  stroke: #d9d9d9; }
+
+.percentage-complete {
+  font-family: "lato", sans-serif;
+  font-size: 40px;
+  fill: #922786; }
+
 @media (min-width: 450px) {
   .top-dashboard {
     grid-template-columns: repeat(2, 1fr);

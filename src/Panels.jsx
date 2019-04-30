@@ -1,4 +1,6 @@
 import React from "react";
+import LineChart from "./LineChart";
+import DonutChart from "./DonutChart";
 
 class Panels extends React.Component {
   render() {
@@ -9,6 +11,9 @@ class Panels extends React.Component {
             <h3>summary</h3>
             <p>balance</p>
             <p className="balance">10 346,78 PLN</p>
+            <div className="line">
+              <LineChart width={700} height={110} />
+            </div>
             <button
               className="btn--info details-button"
               type="button"
@@ -103,6 +108,10 @@ class Panels extends React.Component {
               <h4 className="active">week</h4>
               <h4>month</h4>
             </div>
+            <div className="chart">
+              <DonutChart width={300} height={200} />
+            </div>
+
             <button
               className="btn--info view-button"
               type="button"

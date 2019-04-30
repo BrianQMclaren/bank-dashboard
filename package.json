@@ -12,6 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "@reach/router": "^1.2.1",
+    "d3": "^5.9.2",
     "react": "15.x || 16.x || 16.4.0-alpha.0911da3",
     "react-dom": "15.x || 16.x || 16.4.0-alpha.0911da3"
   },
