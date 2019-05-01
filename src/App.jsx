@@ -9,7 +9,7 @@ class App extends React.Component {
     return (
       <div>
         <header>
-          <Link to="/">D3Bank Dashboard</Link>
+          <Link to="/">UNIBank</Link>
         </header>
         <Router>
           <Dashboard path="/" />

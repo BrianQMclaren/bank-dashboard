@@ -56817,7 +56817,30 @@ Object.keys(_d3Zoom).forEach(function (key) {
     }
   });
 });
-},{"./dist/package":"../node_modules/d3/dist/package.js","d3-array":"../node_modules/d3-array/src/index.js","d3-axis":"../node_modules/d3-axis/src/index.js","d3-brush":"../node_modules/d3-brush/src/index.js","d3-chord":"../node_modules/d3-chord/src/index.js","d3-collection":"../node_modules/d3-collection/src/index.js","d3-color":"../node_modules/d3-color/src/index.js","d3-contour":"../node_modules/d3-contour/src/index.js","d3-dispatch":"../node_modules/d3-dispatch/src/index.js","d3-drag":"../node_modules/d3-drag/src/index.js","d3-dsv":"../node_modules/d3-dsv/src/index.js","d3-ease":"../node_modules/d3-ease/src/index.js","d3-fetch":"../node_modules/d3-fetch/src/index.js","d3-force":"../node_modules/d3-force/src/index.js","d3-format":"../node_modules/d3-format/src/index.js","d3-geo":"../node_modules/d3-geo/src/index.js","d3-hierarchy":"../node_modules/d3-hierarchy/src/index.js","d3-interpolate":"../node_modules/d3-interpolate/src/index.js","d3-path":"../node_modules/d3-path/src/index.js","d3-polygon":"../node_modules/d3-polygon/src/index.js","d3-quadtree":"../node_modules/d3-quadtree/src/index.js","d3-random":"../node_modules/d3-random/src/index.js","d3-scale":"../node_modules/d3-scale/src/index.js","d3-scale-chromatic":"../node_modules/d3-scale-chromatic/src/index.js","d3-selection":"../node_modules/d3-selection/src/index.js","d3-shape":"../node_modules/d3-shape/src/index.js","d3-time":"../node_modules/d3-time/src/index.js","d3-time-format":"../node_modules/d3-time-format/src/index.js","d3-timer":"../node_modules/d3-timer/src/index.js","d3-transition":"../node_modules/d3-transition/src/index.js","d3-voronoi":"../node_modules/d3-voronoi/src/index.js","d3-zoom":"../node_modules/d3-zoom/src/index.js"}],"LineChart.jsx":[function(require,module,exports) {
+},{"./dist/package":"../node_modules/d3/dist/package.js","d3-array":"../node_modules/d3-array/src/index.js","d3-axis":"../node_modules/d3-axis/src/index.js","d3-brush":"../node_modules/d3-brush/src/index.js","d3-chord":"../node_modules/d3-chord/src/index.js","d3-collection":"../node_modules/d3-collection/src/index.js","d3-color":"../node_modules/d3-color/src/index.js","d3-contour":"../node_modules/d3-contour/src/index.js","d3-dispatch":"../node_modules/d3-dispatch/src/index.js","d3-drag":"../node_modules/d3-drag/src/index.js","d3-dsv":"../node_modules/d3-dsv/src/index.js","d3-ease":"../node_modules/d3-ease/src/index.js","d3-fetch":"../node_modules/d3-fetch/src/index.js","d3-force":"../node_modules/d3-force/src/index.js","d3-format":"../node_modules/d3-format/src/index.js","d3-geo":"../node_modules/d3-geo/src/index.js","d3-hierarchy":"../node_modules/d3-hierarchy/src/index.js","d3-interpolate":"../node_modules/d3-interpolate/src/index.js","d3-path":"../node_modules/d3-path/src/index.js","d3-polygon":"../node_modules/d3-polygon/src/index.js","d3-quadtree":"../node_modules/d3-quadtree/src/index.js","d3-random":"../node_modules/d3-random/src/index.js","d3-scale":"../node_modules/d3-scale/src/index.js","d3-scale-chromatic":"../node_modules/d3-scale-chromatic/src/index.js","d3-selection":"../node_modules/d3-selection/src/index.js","d3-shape":"../node_modules/d3-shape/src/index.js","d3-time":"../node_modules/d3-time/src/index.js","d3-time-format":"../node_modules/d3-time-format/src/index.js","d3-timer":"../node_modules/d3-timer/src/index.js","d3-transition":"../node_modules/d3-transition/src/index.js","d3-voronoi":"../node_modules/d3-voronoi/src/index.js","d3-zoom":"../node_modules/d3-zoom/src/index.js"}],"data/scale.json":[function(require,module,exports) {
+module.exports = [{
+  "month": "Mon",
+  "graph": 0
+}, {
+  "month": "Tue",
+  "graph": 2000
+}, {
+  "month": "Wed",
+  "graph": 4000
+}, {
+  "month": "Thu",
+  "graph": 5000
+}, {
+  "month": "Fri",
+  "graph": 6000
+}, {
+  "month": "Sat",
+  "graph": 7000
+}, {
+  "month": "Sun",
+  "graph": 8000
+}];
+},{}],"LineChart.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -56828,6 +56851,8 @@ exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
 
 var d3 = _interopRequireWildcard(require("d3"));
+
+var _scale = _interopRequireDefault(require("./data/scale"));
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
@@ -56881,13 +56906,39 @@ function (_React$Component) {
     key: "lineGenerator",
     value: function lineGenerator() {
       var line = d3.line().curve(d3.curveCatmullRom.alpha(0.5));
-      var points = [[10, 80], [100, 100], [200, 30], [300, 40], [400, 10]];
-      var data = [0, 2000, 4000, 6000, 8000];
+      var points = [[40, 80], [100, 100], [200, 30], [300, 40], [400, 10], [450, 5]];
       var pathData = line(points);
       d3.select("path").attr("d", pathData);
-      var x = d3.scaleLinear().domain([0, 100]).range([100, 800]); // Also draw points for reference
+      var canvas = d3.select(".canvas").append("svg").attr("width", 450).attr("height", 450);
+      var margin = {
+        top: 10,
+        right: 40,
+        bottom: 0,
+        left: 40
+      };
+      var graphWidth = 180 - margin.left - margin.right;
+      var graphHeight = 180 - margin.top - margin.bottom;
+      var graph = canvas.append("g").attr("width", graphWidth).attr("height", graphHeight).attr("transform", "translate(".concat(margin.left, ", ").concat(margin.top, ")"));
+      var xAxisGroup = graph.append("g").attr("transform", "translate(0, ".concat(graphHeight, ")"));
+      var yAxisGroup = graph.append("g");
+      var y = d3.scaleLinear().domain([0, d3.max(_scale.default, function (d) {
+        return d.graph;
+      })]).range([graphHeight, 0]);
+      var x = d3.scaleBand().domain(_scale.default.map(function (item) {
+        return item.month;
+      })).range([0, 400]).paddingInner(0.2).paddingOuter(0.2);
+      var xAxis = d3.axisBottom(x);
+      var yAxis = d3.axisLeft(y).ticks(5).tickFormat(function (d) {
+        return d;
+      });
+      xAxisGroup.call(xAxis);
+      yAxisGroup.call(yAxis); // Also draw points for reference
 
-      var graph = d3.select("svg").selectAll("circle").data(points).enter().append("circle").call(d3.axisBottom(x)).attr("cx", function (d) {
+      d3.select("svg").selectAll("circle").data(points).enter().append("circle").attr("x", function (d) {
+        return x(d.month);
+      }).attr("y", graphHeight).attr("height", graphHeight - y(_scale.default.map(function (d) {
+        return d.graph;
+      }))).attr("cx", function (d) {
         return d[0];
       }).attr("cy", function (d) {
         return d[1];
@@ -56896,9 +56947,10 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var width = 450;
-      var height = 150;
+      var width = 475;
+      var height = 200;
       return _react.default.createElement("svg", {
+        className: "canvas",
         width: width,
         height: height
       }, _react.default.createElement("path", {
@@ -56912,7 +56964,7 @@ function (_React$Component) {
 
 var _default = LineChart;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","d3":"../node_modules/d3/index.js"}],"DonutChart.jsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","d3":"../node_modules/d3/index.js","./data/scale":"data/scale.json"}],"DonutChart.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -57076,10 +57128,7 @@ function (_React$Component) {
         className: "balance"
       }, "10 346,78 PLN"), _react.default.createElement("div", {
         className: "line"
-      }, _react.default.createElement(_LineChart.default, {
-        width: 700,
-        height: 110
-      })), _react.default.createElement("button", {
+      }, _react.default.createElement(_LineChart.default, null)), _react.default.createElement("button", {
         className: "btn--info details-button",
         type: "button",
         name: "button"
@@ -57386,7 +57435,7 @@ function (_React$Component) {
     value: function render() {
       return _react.default.createElement("div", null, _react.default.createElement("header", null, _react.default.createElement(_router.Link, {
         to: "/"
-      }, "D3Bank Dashboard")), _react.default.createElement(_router.Router, null, _react.default.createElement(_Dashboard.default, {
+      }, "UNIBank")), _react.default.createElement(_router.Router, null, _react.default.createElement(_Dashboard.default, {
         path: "/"
       }), _react.default.createElement(_Account.default, {
         path: "/account"
@@ -57426,7 +57475,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52563" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62939" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -12,7 +12,7 @@ class Panels extends React.Component {
             <p>balance</p>
             <p className="balance">10 346,78 PLN</p>
             <div className="line">
-              <LineChart width={700} height={110} />
+              <LineChart />
             </div>
             <button
               className="btn--info details-button"

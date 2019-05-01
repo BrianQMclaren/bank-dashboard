@@ -1,0 +1,30 @@
+[
+  {
+    "month": "Mon",
+    "graph": 0
+  },
+  {
+    "month": "Tue",
+    "graph": 2000
+  },
+  {
+    "month": "Wed",
+    "graph": 4000
+  },
+  {
+    "month": "Thu",
+    "graph": 5000
+  },
+  {
+    "month": "Fri",
+    "graph": 6000
+  },
+  {
+    "month": "Sat",
+    "graph": 7000
+  },
+  {
+    "month": "Sun",
+    "graph": 8000
+  }
+]
