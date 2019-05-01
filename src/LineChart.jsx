@@ -48,14 +48,11 @@ class LineChart extends React.Component {
     const xAxisGroup = graph
       .append("g")
       .attr("transform", `translate(0, ${graphHeight})`);
-
     const yAxisGroup = graph.append("g");
-
     const y = d3
       .scaleLinear()
       .domain([0, d3.max(data, d => d.graph)])
       .range([graphHeight, 0]);
-
     const x = d3
       .scaleBand()
       .domain(data.map(item => item.month))

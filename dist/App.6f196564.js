@@ -28433,7 +28433,7 @@ var Menu = function Menu(props) {
   }, _react.default.createElement("aside", null, _react.default.createElement("ul", {
     className: "sidebar"
   }, _react.default.createElement("i", {
-    className: "fas fa-home"
+    className: "fas fa-home active"
   }), _react.default.createElement("li", null, props.home), _react.default.createElement("i", {
     className: "fas fa-briefcase"
   }), _react.default.createElement("li", null, props.savings), _react.default.createElement("i", {
@@ -57475,7 +57475,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62939" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55875" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

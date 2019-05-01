@@ -607,6 +607,16 @@ header h3 {
     font-weight: lighter;
     padding: 1.75em;
     display: block; }
+  .side-menu .sidebar svg path {
+    fill: #bebbc6; }
+  .side-menu .active {
+    background: #922786;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    padding: 4%; }
+  .side-menu .active path {
+    fill: #fff !important; }
 
 @media (min-width: 450px) {
   .side-menu {

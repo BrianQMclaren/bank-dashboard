@@ -5,7 +5,7 @@ const Menu = props => {
     <section className="side-menu">
       <aside>
         <ul className="sidebar">
-          <i className="fas fa-home" />
+          <i className="fas fa-home active" />
           <li>{props.home}</li>
           <i className="fas fa-briefcase" />
           <li>{props.savings}</li>
