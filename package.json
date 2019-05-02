@@ -6,7 +6,7 @@
   "scripts": {
     "format": "prettier --write \"src/**/*.{js,jsx,css,scss,json}\"",
     "lint": "eslint \"**/*.{js,jsx}\"",
-    "dev": "parcel src/index.html"
+    "dev": "parcel public/index.html"
   },
   "author": "Brian McLaren",
   "license": "MIT",

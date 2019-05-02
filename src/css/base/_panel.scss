@@ -22,6 +22,7 @@
     column-gap: 10px;
     width: 50%;
     padding-left: 1em;
+    float: left;
   }
   ul li {
     font-size: 0.75em;
@@ -127,7 +128,10 @@
     align-items: center;
   }
 }
-
+.navbar {
+  display: flex;
+  align-items: center;
+}
 circle {
   fill: $plum;
   stroke: $plum;
@@ -143,7 +147,18 @@ circle {
   font-size: 40px;
   fill: #922786;
 }
-
+.customer-support {
+  width: 40%;
+  float: right;
+  position: relative;
+  bottom: 40px;
+}
+.cus-credit-card {
+  float: right;
+  width: 40%;
+  position: relative;
+  bottom: 40px;
+}
 @media (min-width: 450px) {
   .top-dashboard {
     grid-template-columns: repeat(2, 1fr);
@@ -152,7 +167,7 @@ circle {
   .bottom-dashboard {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    height: calc(50vh);
+    height: calc(55vh);
   }
 }
 

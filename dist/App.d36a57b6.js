@@ -57276,7 +57276,7 @@ function (_React$Component) {
 
 var _default = Dashboard;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Navigation":"Navigation.js","./Menu":"Menu.js","./Panels":"Panels.js","./Header":"Header.js"}],"Account.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Navigation":"Navigation.js","./Menu":"Menu.js","./Panels":"Panels.js","./Header":"Header.js"}],"Account.js":[function(require, module, exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

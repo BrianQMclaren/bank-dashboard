@@ -8,18 +8,14 @@ html {
 }
 body {
   text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Lato", sans-serif;
   color: #4c4c4c;
   background: $background;
 }
-div img {
-	width: 100%;
-	max-width: 300px;
-}
 h1 {
-  line-height: .55;
-  text-shadow: 0 1px 0 rgba(0,0,0, .4);
+  line-height: 0.55;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
   color: white;
 }
 h2 {
@@ -35,21 +31,27 @@ h4 {
 }
 p {
   font-size: 1.1em;
-  color: $grey;
+  color: $darkGrey;
 }
 nav {
   text-align: center;
   padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul a {
+  text-decoration: none;
 }
 ul {
   list-style: none;
   padding: 0;
 }
 ul li {
-  padding: .5em;
+  padding: 0.5em;
 }
-ul input[type="text"] {
-  box-shadow: 0 3px 5px rgba(0,0,0, .04);
+input[type="text"] {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.04);
   color: $grey;
   padding: 0 0.6em;
   border: none;
@@ -57,21 +59,24 @@ ul input[type="text"] {
   outline: none;
   height: 29px;
   margin-bottom: 1em;
+  margin: 0 auto 0 4em;
+  width: 25%;
 }
 
 button {
   outline: none;
   background-color: $purple;
   color: white;
-  font-size: .78em;
+  font-size: 0.78em;
   margin-top: 1.65em;
-  margin-right: .4em;
+  margin-right: 0.4em;
   border-radius: 2em;
-  padding: .9em 2em;
+  padding: 0.9em 2em;
   cursor: pointer;
   text-transform: uppercase;
 }
-button, select {
+button,
+select {
   background: none;
   border: none;
 }
@@ -94,12 +99,25 @@ header {
 .wrapper {
   width: 100%;
   max-width: 1150px;
-  border-radius: .35em;
+  border-radius: 0.35em;
   overflow: hidden;
   background: $background;
-  box-shadow: 0 0 26px rgba(0,0,0, .13);
+  box-shadow: 0 0 26px rgba(0, 0, 0, 0.13);
+}
+.logo {
+  color: $black;
+  font-size: 0.9em;
+  text-decoration: none;
 }
 
+.profile,
+.logout {
+  display: flex;
+  align-items: center;
+  img {
+    padding: 1em;
+  }
+}
 
 @media (min-width: 450px) {
   .wrapper {
@@ -118,9 +136,6 @@ header {
     height: auto;
     text-align: center;
   }
-  ul input[type="text"] {
-    margin-right: 16em;
-  }
 }
 
 @media (min-width: 860px) {
@@ -133,17 +148,15 @@ header {
     margin: 0;
     li {
       display: inline-block;
-      padding: 1.5em;
+      padding: 1.25em;
     }
   }
- ul input[type="text"] {
-   width: 25%;
- }
- nav {
-   height: 85px;
-   background: white;
- }
- .wrapper {
-   margin: 2.5em auto;
- }
+
+  nav {
+    height: 85px;
+    background: white;
+  }
+  .wrapper {
+    margin: 2.5em auto;
+  }
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import LineChart from "./LineChart";
 import DonutChart from "./DonutChart";
+import credit from "../../public/img/icons8-mastercard.svg";
 
 class Panels extends React.Component {
   render() {
@@ -10,7 +11,7 @@ class Panels extends React.Component {
           <div className="panel">
             <h3>summary</h3>
             <p>balance</p>
-            <p className="balance">10 346,78 PLN</p>
+            <p className="balance">10,346.78 USD</p>
             <div className="line">
               <LineChart />
             </div>
@@ -31,24 +32,31 @@ class Panels extends React.Component {
                 </select>
               </div>
             </div>
+            <div className="customer-account">
+              <h3 className="name">Thomas Kowalski</h3>
+              <ul>
+                <li>Card:</li>
+                <li>Card Type:</li>
+                <li>Account:</li>
+                <li>Card Number:</li>
+                <li>Expiry date:</li>
+                <li>Status:</li>
+                <li>Blocked:</li>
+                <li>Debit</li>
+                <li className="cus-accnt">Debit MasterCard PayPass</li>
+                <li className="cus-accnt">Saving Account</li>
+                <li className="cus-accnt">687676078977****</li>
+                <li className="cus-accnt">31.03.2019</li>
+                <li className="cus-accnt">Active</li>
+                <li className="cus-accnt">743.00 USD</li>
+              </ul>
+              <img
+                className="cus-credit-card"
+                src={credit}
+                alt="visa credit card"
+              />
+            </div>
 
-            <h3 className="name">Tomasz Kowalski</h3>
-            <ul>
-              <li>Card:</li>
-              <li>Card Type:</li>
-              <li>Account:</li>
-              <li>Card Number:</li>
-              <li>Expiry date:</li>
-              <li>Status:</li>
-              <li>Blocked:</li>
-              <li>Debit</li>
-              <li className="cus-accnt">Debit MasterCard PayPass</li>
-              <li className="cus-accnt">Saving Account</li>
-              <li className="cus-accnt">687676******0789</li>
-              <li className="cus-accnt">31.03.2019</li>
-              <li className="cus-accnt">Active</li>
-              <li className="cus-accnt">743.00 PLN</li>
-            </ul>
             <div className="acc-options">
               <p>
                 <a className="more-details">More Details</a>

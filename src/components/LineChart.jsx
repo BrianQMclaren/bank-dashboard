@@ -1,6 +1,6 @@
 import React from "react";
 import * as d3 from "d3";
-import data from "./data/scale";
+import data from "../data/scale";
 
 class LineChart extends React.Component {
   state = {};
