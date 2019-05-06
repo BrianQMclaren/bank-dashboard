@@ -1,5 +1,6 @@
 import React from "react";
 import * as d3 from "d3";
+import { legendColor } from "d3-svg-legend";
 
 const width = 300;
 const height = 200;
@@ -27,6 +28,7 @@ class DonutChart extends React.Component {
         .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
     const color = d3.scaleOrdinal(["#6AD2E6", "#5de61e", "#eb4888", "#922786"]);
+
     const pie = d3.pie();
     const arc = d3
       .arc()
@@ -63,6 +65,16 @@ class DonutChart extends React.Component {
         return color(i);
       })
       .attr("d", arc);
+
+    // // Legend
+    // const legendGroup = svg.append("g").attr("transform", "translate(20, 20)");
+    // const legend = d3
+    //   .legendColor()
+    //   .shape("circle")
+    //   .scale(color(i));
+    //
+    // // call legend
+    // legendGroup.call(legend);
   }
 
   render() {

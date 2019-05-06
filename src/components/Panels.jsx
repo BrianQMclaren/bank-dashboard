@@ -122,6 +122,38 @@ class Panels extends React.Component {
             <div className="chart">
               <DonutChart width={300} height={200} />
             </div>
+            <div className="progress">
+              <div className="progress-bar">
+                <div>
+                  <span>28%</span>
+                  <label htmlFor="food">Food</label>
+                </div>
+                <progress className="food" max="100%" value="38%" />
+              </div>
+              <div className="progress-bar">
+                <div>
+                  <span>21%</span>
+                  <label htmlFor="house">House</label>
+                </div>
+                <progress max="100%" value="31%" />
+              </div>
+            </div>
+            <div className="progress">
+              <div className="progress-bar">
+                <div>
+                  <span>48%</span>
+                  <label htmlFor="car">Car</label>
+                </div>
+                <progress max="100%" value="48%" />
+              </div>
+              <div className="progress-bar">
+                <div>
+                  <span>18%</span>
+                  <label htmlFor="bills">Bills</label>
+                </div>
+                <progress max="100%" value="18%" />
+              </div>
+            </div>
             <button
               className="btn--info view-button"
               type="button"

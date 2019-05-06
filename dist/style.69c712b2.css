@@ -627,7 +627,7 @@ header h3 {
     border-radius: 50%;
     width: 25px;
     height: 25px;
-    padding: 4%; }
+    padding: 5px; }
   .side-menu .active path {
     fill: #fff !important; }
 
@@ -799,6 +799,20 @@ circle {
   position: relative;
   bottom: 40px; }
 
+progress {
+  width: 8em; }
+
+.progress {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 0.7em; }
+  .progress .progress-bar div {
+    display: flex;
+    justify-content: space-between; }
+  .progress .progress-bar label {
+    display: flex;
+    justify-content: flex-end; }
+
 @media (min-width: 450px) {
   .top-dashboard {
     grid-template-columns: repeat(2, 1fr);
@@ -806,7 +820,7 @@ circle {
   .bottom-dashboard {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    height: calc(55vh); } }
+    height: calc(65vh); } }
 
 @media (min-width: 860px) {
   .top-dashboard {
