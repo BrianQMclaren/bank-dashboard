@@ -1,4 +1,6 @@
 import React from "react";
+import TopPanel from "./TopPanel";
+import BottomPanel from "./BottomPanel";
 import LineChart from "./LineChart";
 import DonutChart from "./DonutChart";
 import credit from "../../public/img/icons8-mastercard.svg";
@@ -8,7 +10,7 @@ class Panels extends React.Component {
     return (
       <section>
         <div className="top-dashboard">
-          <div className="panel">
+          <TopPanel>
             <h3>summary</h3>
             <p>balance</p>
             <p className="balance">10,346.78 USD</p>
@@ -22,8 +24,8 @@ class Panels extends React.Component {
             >
               More Details
             </button>
-          </div>
-          <div className="panel">
+          </TopPanel>
+          <TopPanel>
             <div className="cards-header">
               <h3>your cards</h3>
               <div className="cards">
@@ -70,11 +72,11 @@ class Panels extends React.Component {
                 </button>
               </div>
             </div>
-          </div>
+          </TopPanel>
         </div>
 
         <div className="bottom-dashboard">
-          <div className="panel bottom first-child">
+          <BottomPanel className="first-child">
             <div className="history">
               <h4>History</h4>
               <h4 className="active">today</h4>
@@ -109,8 +111,9 @@ class Panels extends React.Component {
                 View More
               </button>
             </div>
-          </div>
-          <div className="panel bottom">
+          </BottomPanel>
+
+          <BottomPanel>
             <div className="charges">
               <h4>Charges</h4>
               <h4 className="active">week</h4>
@@ -119,7 +122,6 @@ class Panels extends React.Component {
             <div className="chart">
               <DonutChart width={300} height={200} />
             </div>
-
             <button
               className="btn--info view-button"
               type="button"
@@ -127,8 +129,9 @@ class Panels extends React.Component {
             >
               More Details
             </button>
-          </div>
-          <div className="panel bottom last-child">
+          </BottomPanel>
+
+          <BottomPanel className="last-child">
             <h4>Messages</h4>
             <div className="msg-board">
               <div className="row">
@@ -167,7 +170,7 @@ class Panels extends React.Component {
             >
               View More
             </button>
-          </div>
+          </BottomPanel>
         </div>
       </section>
     );

@@ -28481,6 +28481,46 @@ var Menu = function Menu(props) {
 
 var _default = Menu;
 exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"../src/components/TopPanel.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var TopPanel = function TopPanel(props) {
+  return _react.default.createElement("div", {
+    className: "panel"
+  }, props.children);
+};
+
+var _default = TopPanel;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"../src/components/BottomPanel.jsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var BottomPanel = function BottomPanel(props) {
+  return _react.default.createElement("div", {
+    className: "panel bottom"
+  }, props.children);
+};
+
+var _default = BottomPanel;
+exports.default = _default;
 },{"react":"../node_modules/react/index.js"}],"../node_modules/d3/dist/package.js":[function(require,module,exports) {
 "use strict";
 
@@ -57114,6 +57154,10 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _TopPanel = _interopRequireDefault(require("./TopPanel"));
+
+var _BottomPanel = _interopRequireDefault(require("./BottomPanel"));
+
 var _LineChart = _interopRequireDefault(require("./LineChart"));
 
 var _DonutChart = _interopRequireDefault(require("./DonutChart"));
@@ -57156,9 +57200,7 @@ function (_React$Component) {
     value: function render() {
       return _react.default.createElement("section", null, _react.default.createElement("div", {
         className: "top-dashboard"
-      }, _react.default.createElement("div", {
-        className: "panel"
-      }, _react.default.createElement("h3", null, "summary"), _react.default.createElement("p", null, "balance"), _react.default.createElement("p", {
+      }, _react.default.createElement(_TopPanel.default, null, _react.default.createElement("h3", null, "summary"), _react.default.createElement("p", null, "balance"), _react.default.createElement("p", {
         className: "balance"
       }, "10,346.78 USD"), _react.default.createElement("div", {
         className: "line"
@@ -57166,9 +57208,7 @@ function (_React$Component) {
         className: "btn--info details-button",
         type: "button",
         name: "button"
-      }, "More Details")), _react.default.createElement("div", {
-        className: "panel"
-      }, _react.default.createElement("div", {
+      }, "More Details")), _react.default.createElement(_TopPanel.default, null, _react.default.createElement("div", {
         className: "cards-header"
       }, _react.default.createElement("h3", null, "your cards"), _react.default.createElement("div", {
         className: "cards"
@@ -57210,8 +57250,8 @@ function (_React$Component) {
         name: "button"
       }, "Change Pin"))))), _react.default.createElement("div", {
         className: "bottom-dashboard"
-      }, _react.default.createElement("div", {
-        className: "panel bottom first-child"
+      }, _react.default.createElement(_BottomPanel.default, {
+        className: "first-child"
       }, _react.default.createElement("div", {
         className: "history"
       }, _react.default.createElement("h4", null, "History"), _react.default.createElement("h4", {
@@ -57232,9 +57272,7 @@ function (_React$Component) {
         className: "btn--info view-button",
         type: "button",
         name: "button"
-      }, "View More"))), _react.default.createElement("div", {
-        className: "panel bottom"
-      }, _react.default.createElement("div", {
+      }, "View More"))), _react.default.createElement(_BottomPanel.default, null, _react.default.createElement("div", {
         className: "charges"
       }, _react.default.createElement("h4", null, "Charges"), _react.default.createElement("h4", {
         className: "active"
@@ -57247,8 +57285,8 @@ function (_React$Component) {
         className: "btn--info view-button",
         type: "button",
         name: "button"
-      }, "More Details")), _react.default.createElement("div", {
-        className: "panel bottom last-child"
+      }, "More Details")), _react.default.createElement(_BottomPanel.default, {
+        className: "last-child"
       }, _react.default.createElement("h4", null, "Messages"), _react.default.createElement("div", {
         className: "msg-board"
       }, _react.default.createElement("div", {
@@ -57280,7 +57318,7 @@ function (_React$Component) {
 
 var _default = Panels;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./LineChart":"../src/components/LineChart.jsx","./DonutChart":"../src/components/DonutChart.jsx","../../public/img/icons8-mastercard.svg":"img/icons8-mastercard.svg"}],"../src/components/Header.jsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./TopPanel":"../src/components/TopPanel.jsx","./BottomPanel":"../src/components/BottomPanel.jsx","./LineChart":"../src/components/LineChart.jsx","./DonutChart":"../src/components/DonutChart.jsx","../../public/img/icons8-mastercard.svg":"img/icons8-mastercard.svg"}],"../src/components/Header.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -57513,7 +57551,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62142" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64416" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
