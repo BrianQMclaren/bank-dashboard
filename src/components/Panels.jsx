@@ -1,4 +1,5 @@
 import React from "react";
+import "@babel/polyfill";
 import TopPanel from "./TopPanel";
 import BottomPanel from "./BottomPanel";
 import LineChart from "./LineChart";
@@ -6,6 +7,10 @@ import DonutChart from "./DonutChart";
 import credit from "../../public/img/icons8-mastercard.svg";
 
 class Panels extends React.Component {
+  state = {
+    data: null
+  };
+
   render() {
     return (
       <section>

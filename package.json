@@ -6,18 +6,25 @@
   "scripts": {
     "format": "prettier --write \"src/**/*.{js,jsx,css,scss,json}\"",
     "lint": "eslint \"**/*.{js,jsx}\"",
-    "dev": "parcel public/index.html"
+    "dev": "parcel public/index.html",
+    "start": "node app.js"
   },
   "author": "Brian McLaren",
   "license": "MIT",
   "dependencies": {
+    "@babel/polyfill": "^7.4.4",
     "@reach/router": "^1.2.1",
+    "body-parser": "^1.19.0",
     "d3": "^5.9.2",
+    "express": "^4.17.0",
     "react": "15.x || 16.x || 16.4.0-alpha.0911da3",
     "react-dom": "15.x || 16.x || 16.4.0-alpha.0911da3"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
+    "@babel/core": "^7.0.0-0",
+    "@babel/plugin-transform-regenerator": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
@@ -31,5 +38,6 @@
     "node-sass": "^4.11.0",
     "parcel-bundler": "^1.12.2",
     "prettier": "^1.16.4"
-  }
+  },
+  "proxy": "http://localhost:3000/"
 }

@@ -2,7 +2,11 @@ import React from "react";
 
 class Account extends React.Component {
   render() {
-    return <h1>Bank Account Transfer</h1>;
+    return (
+      <div className="wrapper">
+        <h3>Bank Account Transfer</h3>
+      </div>
+    );
   }
 }
 

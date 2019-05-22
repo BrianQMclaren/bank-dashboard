@@ -518,6 +518,9 @@ header h3 {
   .logout img {
     padding: 1em; }
 
+.wrapper-account {
+  background: white; }
+
 @media (min-width: 450px) {
   .wrapper {
     margin: 0; }
