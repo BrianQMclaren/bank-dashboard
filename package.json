@@ -7,7 +7,8 @@
     "format": "prettier --write \"src/**/*.{js,jsx,css,scss,json}\"",
     "lint": "eslint \"**/*.{js,jsx}\"",
     "dev": "parcel public/index.html",
-    "start": "node app.js"
+    "start": "nodemon server.js",
+    "prestart": "parcel build ./public/index.html"
   },
   "author": "Brian McLaren",
   "license": "MIT",
@@ -17,8 +18,10 @@
     "body-parser": "^1.19.0",
     "d3": "^5.9.2",
     "express": "^4.17.0",
+    "moment": "^2.24.0",
     "react": "15.x || 16.x || 16.4.0-alpha.0911da3",
-    "react-dom": "15.x || 16.x || 16.4.0-alpha.0911da3"
+    "react-dom": "15.x || 16.x || 16.4.0-alpha.0911da3",
+    "truelayer-client": "^1.0.9"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-0",

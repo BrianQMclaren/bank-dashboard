@@ -64119,7 +64119,411 @@ function (_React$Component) {
 
 var _default = Dashboard;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Navigation":"../src/components/Navigation.jsx","./Menu":"../src/components/Menu.jsx","./Panels":"../src/components/Panels.jsx","./Header":"../src/components/Header.jsx"}],"../src/components/Account.jsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Navigation":"../src/components/Navigation.jsx","./Menu":"../src/components/Menu.jsx","./Panels":"../src/components/Panels.jsx","./Header":"../src/components/Header.jsx"}],"../node_modules/react-load-script/lib/index.js":[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Script = function (_React$Component) {
+  _inherits(Script, _React$Component);
+
+  // A dictionary mapping script URL to a boolean value indicating if the script
+  // has failed to load.
+
+
+  // A dictionary mapping script URLs to a dictionary mapping
+  // component key to component for all components that are waiting
+  // for the script to load.
+  function Script(props) {
+    _classCallCheck(this, Script);
+
+    var _this = _possibleConstructorReturn(this, (Script.__proto__ || Object.getPrototypeOf(Script)).call(this, props));
+
+    _this.scriptLoaderId = 'id' + _this.constructor.idCount++; // eslint-disable-line space-unary-ops, no-plusplus
+    return _this;
+  }
+
+  // A counter used to generate a unique id for each component that uses
+  // ScriptLoaderMixin.
+
+
+  // A dictionary mapping script URL to a boolean value indicating if the script
+  // has already been loaded.
+
+
+  _createClass(Script, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var _props = this.props,
+          onError = _props.onError,
+          onLoad = _props.onLoad,
+          url = _props.url;
+
+
+      if (this.constructor.loadedScripts[url]) {
+        onLoad();
+        return;
+      }
+
+      if (this.constructor.erroredScripts[url]) {
+        onError();
+        return;
+      }
+
+      // If the script is loading, add the component to the script's observers
+      // and return. Otherwise, initialize the script's observers with the component
+      // and start loading the script.
+      if (this.constructor.scriptObservers[url]) {
+        this.constructor.scriptObservers[url][this.scriptLoaderId] = this.props;
+        return;
+      }
+
+      this.constructor.scriptObservers[url] = _defineProperty({}, this.scriptLoaderId, this.props);
+
+      this.createScript();
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      var url = this.props.url;
+
+      var observers = this.constructor.scriptObservers[url];
+
+      // If the component is waiting for the script to load, remove the
+      // component from the script's observers before unmounting the component.
+      if (observers) {
+        delete observers[this.scriptLoaderId];
+      }
+    }
+  }, {
+    key: 'createScript',
+    value: function createScript() {
+      var _this2 = this;
+
+      var _props2 = this.props,
+          onCreate = _props2.onCreate,
+          url = _props2.url,
+          attributes = _props2.attributes;
+
+      var script = document.createElement('script');
+
+      onCreate();
+
+      // add 'data-' or non standard attributes to the script tag
+      if (attributes) {
+        Object.keys(attributes).forEach(function (prop) {
+          return script.setAttribute(prop, attributes[prop]);
+        });
+      }
+
+      script.src = url;
+
+      // default async to true if not set with custom attributes
+      if (!script.hasAttribute('async')) {
+        script.async = 1;
+      }
+
+      var callObserverFuncAndRemoveObserver = function callObserverFuncAndRemoveObserver(shouldRemoveObserver) {
+        var observers = _this2.constructor.scriptObservers[url];
+        Object.keys(observers).forEach(function (key) {
+          if (shouldRemoveObserver(observers[key])) {
+            delete _this2.constructor.scriptObservers[url][_this2.scriptLoaderId];
+          }
+        });
+      };
+      script.onload = function () {
+        _this2.constructor.loadedScripts[url] = true;
+        callObserverFuncAndRemoveObserver(function (observer) {
+          observer.onLoad();
+          return true;
+        });
+      };
+
+      script.onerror = function () {
+        _this2.constructor.erroredScripts[url] = true;
+        callObserverFuncAndRemoveObserver(function (observer) {
+          observer.onError();
+          return true;
+        });
+      };
+
+      document.body.appendChild(script);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return null;
+    }
+  }]);
+
+  return Script;
+}(_react2.default.Component);
+
+Script.propTypes = {
+  attributes: _propTypes.PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  onCreate: _propTypes.PropTypes.func,
+  onError: _propTypes.PropTypes.func.isRequired,
+  onLoad: _propTypes.PropTypes.func.isRequired,
+  url: _propTypes.PropTypes.string.isRequired
+};
+Script.defaultProps = {
+  attributes: {},
+  onCreate: function onCreate() {},
+  onError: function onError() {},
+  onLoad: function onLoad() {} };
+Script.scriptObservers = {};
+Script.loadedScripts = {};
+Script.erroredScripts = {};
+Script.idCount = 0;
+exports.default = Script;
+module.exports = exports['default'];
+},{"react":"../node_modules/react/index.js","prop-types":"../node_modules/prop-types/index.js"}],"../node_modules/react-plaid-link/lib/PlaidLink.js":[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactLoadScript = require('react-load-script');
+
+var _reactLoadScript2 = _interopRequireDefault(_reactLoadScript);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PlaidLink = function (_Component) {
+  _inherits(PlaidLink, _Component);
+
+  function PlaidLink(props) {
+    _classCallCheck(this, PlaidLink);
+
+    var _this = _possibleConstructorReturn(this, (PlaidLink.__proto__ || Object.getPrototypeOf(PlaidLink)).call(this, props));
+
+    _this.state = {
+      disabledButton: true,
+      linkLoaded: false,
+      initializeURL: 'https://cdn.plaid.com/link/v2/stable/link-initialize.js'
+    };
+
+    _this.onScriptError = _this.onScriptError.bind(_this);
+    _this.onScriptLoaded = _this.onScriptLoaded.bind(_this);
+    _this.handleLinkOnLoad = _this.handleLinkOnLoad.bind(_this);
+    _this.handleOnClick = _this.handleOnClick.bind(_this);
+    return _this;
+  }
+
+  _createClass(PlaidLink, [{
+    key: 'onScriptError',
+    value: function onScriptError() {
+      console.error('There was an issue loading the link-initialize.js script');
+    }
+  }, {
+    key: 'onScriptLoaded',
+    value: function onScriptLoaded() {
+      window.linkHandler = window.Plaid.create({
+        apiVersion: this.props.apiVersion,
+        clientName: this.props.clientName,
+        env: this.props.env,
+        key: this.props.publicKey,
+        user: this.props.user,
+        onExit: this.props.onExit,
+        onLoad: this.handleLinkOnLoad,
+        onEvent: this.props.onEvent,
+        onSuccess: this.props.onSuccess,
+        product: this.props.product,
+        selectAccount: this.props.selectAccount,
+        token: this.props.token,
+        webhook: this.props.webhook
+      });
+
+      this.setState({ disabledButton: false });
+    }
+  }, {
+    key: 'handleLinkOnLoad',
+    value: function handleLinkOnLoad() {
+      if (this.props.onLoad != null) {
+        this.props.onLoad();
+      }
+      this.setState({ linkLoaded: true });
+    }
+  }, {
+    key: 'handleOnClick',
+    value: function handleOnClick(event) {
+      if (this.props.onClick != null) {
+        this.props.onClick(event);
+      }
+      var institution = this.props.institution || null;
+      if (window.linkHandler) {
+        window.linkHandler.open(institution);
+      }
+    }
+  }, {
+    key: 'exit',
+    value: function exit(configurationObject) {
+      if (window.linkHandler) {
+        window.linkHandler.exit(configurationObject);
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'button',
+          {
+            onClick: this.handleOnClick,
+            disabled: this.state.disabledButton,
+            style: this.props.style,
+            className: this.props.className },
+          this.props.children
+        ),
+        _react2.default.createElement(_reactLoadScript2.default, {
+          url: this.state.initializeURL,
+          onError: this.onScriptError,
+          onLoad: this.onScriptLoaded })
+      );
+    }
+  }]);
+
+  return PlaidLink;
+}(_react.Component);
+
+PlaidLink.defaultProps = {
+  apiVersion: 'v2',
+  env: 'sandbox',
+  institution: null,
+  selectAccount: false,
+  token: null,
+  style: {
+    padding: '6px 4px',
+    outline: 'none',
+    background: '#FFFFFF',
+    border: '2px solid #F1F1F1',
+    borderRadius: '4px'
+  }
+};
+PlaidLink.propTypes = {
+  // ApiVersion flag to use new version of Plaid API
+  apiVersion: _propTypes2.default.string,
+
+  // Displayed once a user has successfully linked their account
+  clientName: _propTypes2.default.string.isRequired,
+
+  // The Plaid API environment on which to create user accounts.
+  // For development and testing, use tartan. For production, use production
+  env: _propTypes2.default.oneOf(['tartan', 'sandbox', 'development', 'production']).isRequired,
+
+  // Open link to a specific institution, for a more custom solution
+  institution: _propTypes2.default.string,
+
+  // The public_key associated with your account; available from
+  // the Plaid dashboard (https://dashboard.plaid.com)
+  publicKey: _propTypes2.default.string.isRequired,
+
+  // The Plaid products you wish to use, an array containing some of connect,
+  // auth, identity, income, transactions, assets
+  product: _propTypes2.default.arrayOf(_propTypes2.default.oneOf(['connect', // legacy product name
+  'info', // legacy product name
+  'auth', 'identity', 'income', 'transactions', 'assets', 'holdings'])).isRequired,
+
+  // Specify an existing user's public token to launch Link in update mode.
+  // This will cause Link to open directly to the authentication step for
+  // that user's institution.
+  token: _propTypes2.default.string,
+
+  // Specify a user object to enable all Auth features. Reach out to your
+  // account manager or integrations@plaid.com to get enabled. See the Auth
+  // [https://plaid.com/docs#auth] docs for integration details.
+  user: _propTypes2.default.shape({
+    // Your user's legal first and last name
+    legalName: _propTypes2.default.string,
+    // Your user's associated email address
+    emailAddress: _propTypes2.default.string
+  }),
+
+  // Set to true to launch Link with the 'Select Account' pane enabled.
+  // Allows users to select an individual account once they've authenticated
+  selectAccount: _propTypes2.default.bool,
+
+  // Specify a webhook to associate with a user.
+  webhook: _propTypes2.default.string,
+
+  // A function that is called when a user has successfully onboarded their
+  // account. The function should expect two arguments, the public_key and a
+  // metadata object
+  onSuccess: _propTypes2.default.func.isRequired,
+
+  // A function that is called when a user has specifically exited Link flow
+  onExit: _propTypes2.default.func,
+
+  // A function that is called when the Link module has finished loading.
+  // Calls to plaidLinkHandler.open() prior to the onLoad callback will be
+  // delayed until the module is fully loaded.
+  onLoad: _propTypes2.default.func,
+
+  // A function that is called during a user's flow in Link.
+  // See
+  onEvent: _propTypes2.default.func,
+
+  // Button Styles as an Object
+  style: _propTypes2.default.object,
+
+  // Button Class names as a String
+  className: _propTypes2.default.string
+};
+exports.default = PlaidLink;
+},{"react":"../node_modules/react/index.js","react-load-script":"../node_modules/react-load-script/lib/index.js","prop-types":"../node_modules/prop-types/index.js"}],"../node_modules/react-plaid-link/lib/index.js":[function(require,module,exports) {
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _PlaidLink = require('./PlaidLink');
+
+var _PlaidLink2 = _interopRequireDefault(_PlaidLink);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _PlaidLink2.default;
+},{"./PlaidLink":"../node_modules/react-plaid-link/lib/PlaidLink.js"}],"../src/components/Account.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -64128,6 +64532,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
+
+var _reactPlaidLink = _interopRequireDefault(require("react-plaid-link"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -64155,17 +64561,47 @@ function (_React$Component) {
   _inherits(Account, _React$Component);
 
   function Account() {
+    var _getPrototypeOf2;
+
+    var _temp, _this;
+
     _classCallCheck(this, Account);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Account).apply(this, arguments));
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Account)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.state = {
+      items: null
+    }, _temp));
   }
 
   _createClass(Account, [{
+    key: "handleOnSuccess",
+    value: function handleOnSuccess(token, metadata) {
+      // send token to client server
+      var plaidData = {
+        public_token: token,
+        metadata: metadata
+      };
+    }
+  }, {
+    key: "handleOnExit",
+    value: function handleOnExit() {// handle the case when your user exits Link
+    }
+  }, {
     key: "render",
     value: function render() {
       return _react.default.createElement("div", {
         className: "wrapper"
-      }, _react.default.createElement("h3", null, "Bank Account Transfer"));
+      }, _react.default.createElement("h3", null, "Bank Account Transfer"), _react.default.createElement(_reactPlaidLink.default, {
+        clientName: "UNIBANK",
+        env: "sandbox",
+        product: ["transactions"],
+        publicKey: "process.env.PUBLIC_KEY",
+        onExit: this.handleOnExit,
+        onSuccess: this.handleOnSuccess
+      }, "Link Bank Account"));
     }
   }]);
 
@@ -64174,7 +64610,7 @@ function (_React$Component) {
 
 var _default = Account;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"../src/components/App.jsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-plaid-link":"../node_modules/react-plaid-link/lib/index.js"}],"../src/components/App.jsx":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -64261,7 +64697,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55409" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51775" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
