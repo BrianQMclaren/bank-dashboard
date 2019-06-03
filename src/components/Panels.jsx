@@ -2,19 +2,22 @@ import React from "react";
 import "@babel/polyfill";
 import TopPanel from "./TopPanel";
 import BottomPanel from "./BottomPanel";
+import Account from "./Account";
 import LineChart from "./LineChart";
 import DonutChart from "./DonutChart";
 import credit from "../../public/img/icons8-mastercard.svg";
 
-
 class Panels extends React.Component {
   state = {
-    data: null
+    balance: 0,
+    loading: false,
+    error: null
   };
 
   render() {
     return (
       <section>
+        <Account />
         <div className="top-dashboard">
           <TopPanel>
             <h3>summary</h3>

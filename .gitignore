@@ -1,2 +1,24 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
 node_modules
+
+# Optional npm cache directory
+.npm
+
+# vs code config
+.vscode
+
+#webstorm
+.idea/
+
+# any .task todo files
+**/*.tasks
+
+# .cache directories
+**/.cache
+
 .env

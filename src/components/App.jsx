@@ -3,6 +3,7 @@ import { render } from "react-dom";
 import { Router } from "@reach/router";
 import Dashboard from "./Dashboard";
 import Account from "./Account";
+import Transfer from "./Transfer";
 
 class App extends React.Component {
   render() {
@@ -10,7 +11,7 @@ class App extends React.Component {
       <div>
         <Router>
           <Dashboard path="/" />
-          <Account path="/account" />
+          <Transfer path="/transfer" />
         </Router>
       </div>
     );

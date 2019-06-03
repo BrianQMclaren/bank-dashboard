@@ -63899,7 +63899,10 @@ function (_React$Component) {
     }
 
     return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Panels)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.state = {
-      data: null
+      items: null,
+      balance: 0,
+      loading: false,
+      error: null
     }, _temp));
   }
 
@@ -64571,23 +64574,15 @@ function (_React$Component) {
       args[_key] = arguments[_key];
     }
 
-    return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Account)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.state = {
-      items: null
+    return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Account)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.handleOnSuccess = function (token, metadata) {
+      // send token to client server
+      console.log(token, metadata);
     }, _temp));
   }
 
   _createClass(Account, [{
-    key: "handleOnSuccess",
-    value: function handleOnSuccess(token, metadata) {
-      // send token to client server
-      var plaidData = {
-        public_token: token,
-        metadata: metadata
-      };
-    }
-  }, {
     key: "handleOnExit",
-    value: function handleOnExit() {// handle the case when your user exits Link
+    value: function handleOnExit() {// handle the case when user exits
     }
   }, {
     key: "render",
@@ -64596,12 +64591,12 @@ function (_React$Component) {
         className: "wrapper"
       }, _react.default.createElement("h3", null, "Bank Account Transfer"), _react.default.createElement(_reactPlaidLink.default, {
         clientName: "UNIBANK",
-        env: "sandbox",
-        product: ["transactions"],
-        publicKey: "process.env.PUBLIC_KEY",
+        env: "development",
+        product: ["auth", "transactions"],
+        publicKey: "PUBLIC_KEY",
         onExit: this.handleOnExit,
         onSuccess: this.handleOnSuccess
-      }, "Link Bank Account"));
+      }, "Open Link and connect your bank!"));
     }
   }]);
 
@@ -64697,7 +64692,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51775" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53440" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

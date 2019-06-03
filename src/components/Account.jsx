@@ -1,34 +1,32 @@
 import React from "react";
+import PlaidLink from "react-plaid-link";
 
 class Account extends React.Component {
   state = {
-    list: []
+    accounts: []
   };
-  componentDidMount() {
-    this.getList();
+  handleOnSuccess = (token, metadata) => {
+    // send token to client server
+
+    console.log(token, metadata);
+  };
+  handleOnExit() {
+    // handle the case when user exits
   }
-  getList = () => {
-    fetch("/api/getList")
-      .then(res => res.json())
-      .then(list => this.setState({ list }));
-  };
   render() {
-    const { list } = this.state;
     return (
-      <div className="wrapper">
-        <h3>Bank Account Transfer</h3>
-        {list.length ? (
-          <div>
-            {/* Render the list of items */}
-            {list.map(item => {
-              return <div>{item}</div>;
-            })}
-          </div>
-        ) : (
-          <div>
-            <h2>No List Items Found</h2>
-          </div>
-        )}
+      <div>
+        <PlaidLink
+          className="plaid"
+          clientName="UNIBANK"
+          env="development"
+          product={["transactions"]}
+          publicKey={process.env.PUBLIC_KEY}
+          onExit={this.handleOnExit}
+          onSuccess={this.handleOnSuccess}
+        >
+          Open Link and connect your bank!
+        </PlaidLink>
       </div>
     );
   }
