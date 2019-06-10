@@ -1,0 +1,14 @@
+%btn {
+	cursor: pointer;
+	text-transform: uppercase;
+	display: inline-block;
+	margin: 5px;
+	border-radius: 2em;
+	border: 0;
+	font-size: 0.8em;
+	font-weight: $font-weight--bold;
+  box-shadow: 0 3px 5px rgba(0,0,0, .04);
+	&:active {
+		opacity: initial;
+	}
+}

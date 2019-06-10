@@ -1,0 +1,184 @@
+.panel {
+  border-radius: 5px;
+  background: white;
+  box-shadow: 0 0 26px rgba(0, 0, 0, 0.13);
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  h3 {
+    color: black;
+    font-weight: 400;
+    font-size: 1em;
+    text-transform: capitalize;
+    margin-left: 1em;
+    padding-top: 0.25em;
+  }
+  ul {
+    -moz-column-count: 2;
+    -moz-column-gap: 10px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 10px;
+    column-count: 2;
+    column-gap: 10px;
+    width: 50%;
+    padding-left: 1em;
+    float: left;
+  }
+  ul li {
+    font-size: 0.75em;
+    padding: 0.25em;
+    width: 100%;
+  }
+  a {
+    text-decoration: none;
+    font-size: 0.5em;
+  }
+}
+.panel > p {
+  font-size: 0.7em;
+  margin-top: 0;
+  margin-left: 1.5em;
+  display: inline-block;
+}
+.panel .balance {
+  margin-left: 0.75em;
+  font-size: 1.25em;
+}
+.panel .balance::before {
+  content: "\2022";
+  color: $purple;
+  margin-right: 0.25em;
+}
+.top-dashboard {
+  display: grid;
+  grid-gap: 0.25em;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+.bottom-dashboard {
+  display: grid;
+  grid-gap: 0.25em;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+.panel .name {
+  font-size: 1.25em;
+  padding: 1em 0;
+  margin: 0 0.75em 0.75em;
+  border-bottom: 1px solid #f6f6f6;
+  width: 55%;
+}
+.panel .history,
+.panel .charges {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.cus-accnt {
+  color: #a8a8a8;
+}
+.cards-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5em;
+}
+.acc-options {
+  display: flex;
+  justify-content: space-between;
+}
+.more-details {
+  padding-left: 2.2em;
+  color: #a8a8a8;
+}
+.transactions {
+  width: 90%;
+}
+.transactions .row {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #f6f6f6;
+  p {
+    margin: 0.75em;
+  }
+}
+.msg-board .row:last-child,
+.transactions .row:last-child {
+  border-bottom: none;
+}
+.transactions p,
+.msg-board p {
+  font-size: 0.7em;
+  text-align: left;
+  margin: 0.5em;
+}
+.msg-board {
+  margin: 0 auto;
+  width: 95%;
+  .row {
+    display: flex;
+    border-bottom: 1px solid #f6f6f6;
+  }
+  .name {
+    text-align: right;
+    font-size: 0.6em;
+    border-bottom: none;
+    align-items: center;
+  }
+}
+.navbar {
+  display: flex;
+  align-items: center;
+}
+circle {
+  fill: $plum;
+  stroke: $plum;
+}
+
+.line-chart {
+  fill: none;
+  stroke: #d9d9d9;
+}
+
+.percentage-complete {
+  font-family: "lato", sans-serif;
+  font-size: 40px;
+  fill: #922786;
+}
+.customer-support {
+  width: 40%;
+  float: right;
+  position: relative;
+  bottom: 40px;
+}
+.cus-credit-card {
+  float: right;
+  width: 40%;
+  position: relative;
+  bottom: 40px;
+}
+.plaid {
+  color: $plum;
+}
+@media (min-width: 450px) {
+  .top-dashboard {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  .bottom-dashboard {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    height: calc(55vh);
+  }
+}
+
+@media (min-width: 860px) {
+  .top-dashboard {
+    width: 90%;
+  }
+  .bottom {
+    text-align: center;
+  }
+}

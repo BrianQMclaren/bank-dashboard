@@ -1,0 +1,52 @@
+.side-menu {
+  display: flex;
+  flex-direction: column;
+
+  .sidebar {
+    padding-left: 0;
+    padding-top: 3em;
+    background: white;
+    text-align: center;
+  }
+  .sidebar > li {
+    font-size: 0.7em;
+    font-weight: lighter;
+    padding: 1.75em;
+    display: block;
+  }
+  .sidebar svg path {
+    fill: #bebbc6;
+  }
+  .active {
+    background: $plum;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    padding: 4%;
+  }
+  .active path {
+    fill: #fff !important;
+  }
+}
+
+@media (min-width: 450px) {
+  .side-menu {
+    float: none;
+    width: 100%;
+    height: auto;
+    .sidebar {
+      min-height: 0;
+    }
+  }
+}
+
+@media (min-width: 860px) {
+  .side-menu {
+    float: left;
+    width: 10%;
+    height: 800px;
+    .sidebar {
+      min-height: 900px;
+    }
+  }
+}

@@ -802,6 +802,9 @@ circle {
   position: relative;
   bottom: 40px; }
 
+.plaid {
+  color: #922786; }
+
 @media (min-width: 450px) {
   .top-dashboard {
     grid-template-columns: repeat(2, 1fr);

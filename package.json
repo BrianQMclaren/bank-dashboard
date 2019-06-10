@@ -6,8 +6,9 @@
   "scripts": {
     "format": "prettier --write \"src/**/*.{js,jsx,css,scss,json}\"",
     "lint": "eslint \"**/*.{js,jsx}\"",
-    "dev": "parcel public/index.html",
-    "start": "NODE_ENV=development && nodemon server.js",
+    "client": "parcel client/public/index.html",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\"",
+    "server": "NODE_ENV=development && nodemon server.js",
     "prestart": "parcel build ./public/index.html"
   },
   "author": "Brian McLaren",
@@ -21,6 +22,7 @@
     "d3": "^5.9.2",
     "dotenv": "^8.0.0",
     "express": "^4.17.0",
+    "moment": "^2.24.0",
     "plaid": "^4.0.0",
     "react": "15.x || 16.x || 16.4.0-alpha.0911da3",
     "react-dom": "15.x || 16.x || 16.4.0-alpha.0911da3",
