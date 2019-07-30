@@ -22,3 +22,9 @@ node_modules
 **/.cache
 
 .env
+
+.cache
+
+.idea
+
+dist/

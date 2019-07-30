@@ -2,7 +2,7 @@
 
 ### Inspiration
 
-![screen shot 2019-05-02 at 2 53 48 pm](public/img/dashboard.png)
+![screen shot 2019-05-02 at 2 53 48 pm](client/public/img/dashboard.png)
 
 ### Development
 
