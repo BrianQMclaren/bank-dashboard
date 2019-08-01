@@ -820,5 +820,37 @@ circle {
   .bottom {
     text-align: center; } }
 
+.form-login,
+.form-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2em; }
+  .form-login input,
+  .form-register input {
+    margin: 1em;
+    width: 50%;
+    padding: 1em;
+    border: 1px solid #bebbc6;
+    border-radius: 0.25em;
+    outline: none;
+    height: unset; }
+  .form-login button,
+  .form-register button {
+    width: 50%;
+    background: #922786;
+    color: #fff;
+    border-radius: 0.25em;
+    font-size: 1em;
+    text-transform: unset; }
+
+nav a {
+  text-decoration: none;
+  font-size: 1em;
+  margin-right: 20px; }
+  nav a:hover {
+    color: #eb4888; }
+
 
 /*# sourceMappingURL=/style.69c712b2.css.map */
