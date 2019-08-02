@@ -1,5 +1,12 @@
 import React from "react";
 import "@babel/polyfill";
+import { connect } from "react-redux";
+import {
+  getTransactions,
+  addAccount,
+  deleteAccount
+} from "../../actions/accountActions";
+import { logoutUser } from "../../actions/authActions";
 import TopPanel from "./TopPanel";
 import BottomPanel from "./BottomPanel";
 import Account from "./Account";
@@ -8,13 +15,42 @@ import DonutChart from "./DonutChart";
 import credit from "../../public/img/icons8-mastercard.svg";
 
 class Panels extends React.Component {
-  state = {
-    balance: 0,
-    loading: false,
-    error: null
+  componentDidMount() {
+    const { accounts } = this.props;
+    this.props.getTransactions(accounts);
+  }
+
+  //add account
+
+  handleOnSuccess = (token, metadata) => {
+    const { accounts } = this.props;
+    const plaidData = {
+      public_token: token,
+      metadata: metadata,
+      accounts: accounts
+    };
+    this.props.addAccount(plaidData);
+  };
+
+  handleDeleteAccount = id => {
+    const { accounts } = this.props;
+    const accountData = {
+      id,
+      accounts
+    };
+    this.props.deleteAccount(accountData);
+  };
+
+  // Logout
+  handleLogoutClick = e => {
+    e.preventDefault();
+    this.props.logoutUser();
   };
 
   render() {
+    const { user, accounts } = this.props;
+    const { transactions, transactionsLoading } = this.props.plaid;
+
     return (
       <section>
         <Account />
@@ -186,4 +222,11 @@ class Panels extends React.Component {
   }
 }
 
-export default Panels;
+const mapStateToProps = state => ({
+  plaid: state.plaid
+});
+
+export default connect(
+  mapStateToProps,
+  { logoutUser, getTransactions, addAccount, deleteAccount }
+)(Panels);

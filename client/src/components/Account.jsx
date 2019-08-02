@@ -1,7 +1,10 @@
 import React from "react";
+import { connect } from "react-redux";
+import { logoutUser } from "../../actions/authActions";
+import { getAccounts, addAccount } from "../../actions/accountActions";
+import Dashboard from "./Dashboard";
 import PlaidLink from "react-plaid-link";
 import plaid from "plaid";
-import axios from "axios";
 
 const PLAID_CLIENT_ID = process.env.CLIENT_ID;
 const PLAID_SECRET = process.env.SECRET;
@@ -16,37 +19,70 @@ const client = new plaid.Client(
 );
 
 class Account extends React.Component {
-  state = {
-    accounts: []
-  };
   componentDidMount() {
-    this.handleOnSuccess();
+    this.props.getAccounts();
   }
+
+  // Add account
   handleOnSuccess = (token, metadata) => {
-    // send token to client server
-    console.log(token, metadata);
+    const plaidData = {
+      public_token: token,
+      metadata: metadata
+    };
+    this.props.addAccount(plaidData);
   };
 
-  handleOnExit() {
-    // handle the case when user exits
-  }
+  // Logout
+  handleLogoutClick = e => {
+    e.preventDefault();
+    this.props.logoutUser();
+  };
+
   render() {
-    return (
-      <div>
-        <PlaidLink
-          className="plaid"
-          clientName="UNIBANK"
-          env="sandbox"
-          product={["auth", "transactions"]}
-          publicKey={process.env.PUBLIC_KEY}
-          onExit={this.handleOnExit}
-          onSuccess={this.handleOnSuccess}
-        >
-          Open Link and connect your bank!
-        </PlaidLink>
-      </div>
-    );
+    const { user } = this.props.auth;
+    const { accounts, accountsLoading } = this.props.plaid;
+
+    let dashboardContent;
+
+    if (accounts == null || accountsLoading) {
+      dashboardContent = <div>Loading...</div>;
+    } else if (accounts.length > 0) {
+      dashboardContent = <Dashboard user={user} accounts={accounts} />;
+    } else {
+      // user has no linked accounts
+      dashboardContent = (
+        <div className="wrapper">
+          <h3>
+            Welcome, <b>{user.name}</b>
+          </h3>
+          <p>To get started link your first bank account</p>
+          <>
+            <PlaidLink
+              className="plaid"
+              clientName="UNIBANK"
+              env="sandbox"
+              product={["auth", "transactions"]}
+              publicKey={process.env.PUBLIC_KEY}
+              onExit={this.handleLogoutClick}
+              onSuccess={this.handleOnSuccess}
+              onScriptLoad={() => this.setState({ loaded: true })}
+            >
+              Open Link and connect your bank!
+            </PlaidLink>
+          </>
+        </div>
+      );
+    }
+    return <div>{dashboardContent}</div>;
   }
 }
 
-export default Account;
+const mapStateToProps = state => ({
+  auth: state.auth,
+  plaid: state.plaid
+});
+
+export default connect(
+  mapStateToProps,
+  { logoutUser, getAccounts, addAccount }
+)(Account);
