@@ -15,14 +15,16 @@
     outline: none;
     height: unset;
   }
-  button {
-    width: 50%;
-    background: $plum;
-    color: $white;
-    border-radius: 0.25em;
-    font-size: 1em;
-    text-transform: unset;
-  }
+}
+
+.form-login-button,
+.form-register-button {
+  width: 50%;
+  background: $plum;
+  color: $white;
+  border-radius: 0.25em;
+  font-size: 1em;
+  text-transform: unset;
 }
 nav a {
   text-decoration: none;

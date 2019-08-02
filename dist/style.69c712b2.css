@@ -483,6 +483,12 @@ select {
   background: none;
   border: none; }
 
+button a {
+  background: unset;
+  background-color: #922786;
+  color: #fff;
+  text-decoration: none; }
+
 header p {
   font-size: 0.7em;
   margin-top: 0;
@@ -609,6 +615,19 @@ header h3 {
     margin-right: 3.75em;
     position: relative;
     bottom: 1.5em; } }
+
+.landing {
+  text-align: center; }
+  .landing header {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .landing h1 {
+    color: #1b1b1b; }
+  .landing button {
+    width: 20%; }
 
 .side-menu {
   display: flex;
@@ -836,14 +855,15 @@ circle {
     border-radius: 0.25em;
     outline: none;
     height: unset; }
-  .form-login button,
-  .form-register button {
-    width: 50%;
-    background: #922786;
-    color: #fff;
-    border-radius: 0.25em;
-    font-size: 1em;
-    text-transform: unset; }
+
+.form-login-button,
+.form-register-button {
+  width: 50%;
+  background: #922786;
+  color: #fff;
+  border-radius: 0.25em;
+  font-size: 1em;
+  text-transform: unset; }
 
 nav a {
   text-decoration: none;

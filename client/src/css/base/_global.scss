@@ -80,6 +80,12 @@ select {
   background: none;
   border: none;
 }
+button a {
+  background: unset;
+  background-color: $plum;
+  color: $white;
+  text-decoration: none;
+}
 header p {
   font-size: 0.7em;
   margin-top: 0;

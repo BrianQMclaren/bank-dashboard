@@ -8,7 +8,7 @@ class Login extends React.Component {
     errors: {}
   };
   handleOnChange = e => {
-    this.setState({ [e.target.id]: [e.target.value] });
+    this.setState({ [e.target.id]: e.target.value });
   };
 
   handleOnSubmit = e => {
@@ -30,17 +30,21 @@ class Login extends React.Component {
             type="text"
             onChange={this.handleOnChange}
             value={this.state.email}
-            errors={errors.email}
+            error={errors.email}
+            id="email"
             placeholder="email"
           />
           <input
             type="text"
             onChange={this.handleOnChange}
             value={this.state.password}
-            errors={errors.password}
+            error={errors.password}
+            id="password"
             placeholder="password"
           />
-          <button type="submit">Login</button>
+          <button className="form-login-button" type="submit">
+            Login
+          </button>
         </form>
       </div>
     );

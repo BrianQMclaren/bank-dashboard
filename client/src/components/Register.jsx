@@ -10,7 +10,7 @@ class Register extends React.Component {
   };
 
   handleOnChange = e => {
-    this.setState({ [e.target.id]: [e.target.value] });
+    this.setState({ [e.target.id]: e.target.value });
   };
 
   handleOnSubmit = e => {
@@ -18,6 +18,12 @@ class Register extends React.Component {
   };
 
   render() {
+    const newUser = {
+      name: this.state.name,
+      email: this.state.email,
+      password: this.state.password
+    };
+    console.log(newUser);
     const { errors } = this.state;
     return (
       <div>
@@ -33,22 +39,30 @@ class Register extends React.Component {
           <input
             onChange={this.handleOnChange}
             value={this.state.name}
-            errors={errors.name}
+            error={errors.name}
+            type="text"
+            id="name"
             placeholder="name"
           />
           <input
             onChange={this.handleOnChange}
             value={this.state.email}
-            errors={errors.email}
+            error={errors.email}
+            type="email"
+            id="email"
             placeholder="email"
           />
           <input
             onChange={this.handleOnChange}
             value={this.state.password}
-            errors={errors.password}
+            error={errors.password}
+            type="password"
+            id="password"
             placeholder="password"
           />
-          <button type="submit">Sign up</button>
+          <button className="form-register-button" type="submit">
+            Sign up
+          </button>
         </form>
       </div>
     );
