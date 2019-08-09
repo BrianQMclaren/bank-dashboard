@@ -11,9 +11,9 @@ dotenv.config();
 const Account = require("../../models/Account");
 const User = require("../../models/User");
 
-const PLAID_CLIENT_ID = process.env.CLIENT_ID;
-const PLAID_SECRET = process.env.SECRET;
-const PLAID_PUBLIC_KEY = process.env.PUBLIC_KEY;
+const PLAID_CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
+const PLAID_SECRET = process.env.REACT_APP_SECRET;
+const PLAID_PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
 
 const client = new plaid.Client(
   PLAID_CLIENT_ID,
@@ -47,7 +47,7 @@ router.post(
           ACCESS_TOKEN = exchangeResponse.access_token;
           ITEM_ID = exchangeResponse.item_id;
 
-          // check if account exists
+          // check if account already exists
           Account.findOne({
             userId: req.user.id,
             institutionId: institution_id
@@ -56,9 +56,9 @@ router.post(
               if (account) {
                 console.log("account already exists");
               } else {
-                const newAccount = newAccount({
+                const newAccount = new Account({
                   userId: userId,
-                  access_token: ACCESS_TOKEN,
+                  accessToken: ACCESS_TOKEN,
                   itemId: ITEM_ID,
                   institutionId: institution_id,
                   institutionName: name
@@ -67,10 +67,10 @@ router.post(
               }
             })
             .catch(err => console.log(err));
-          MongoError;
+          // MongoError
         })
         .catch(err => console.log(err));
-      PlaidError;
+      // PlaidError
     }
   }
 );
@@ -124,7 +124,8 @@ router.post(
               accountName: institutionName,
               transactions: res.transactions
             });
-            // Don't send back response till all transactions have been added
+
+            //Don't send back response till all transactions have been added
             if (transactions.length === accounts.length) {
               res.json(transactions);
             }

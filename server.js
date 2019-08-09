@@ -29,12 +29,11 @@ app.use(bodyParser.json());
 app.use(passport.initialize());
 // Passport config
 require("./config/passport")(passport);
+
 // Routes
 app.use("/api/users", users);
+app.use("/api/plaid", plaid);
 
-// Serve the static files from the React app
-app.use(express.static(path.join(__dirname, "dist")));
-
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 app.listen(port, () => console.log(`listening on port ${port}`));
