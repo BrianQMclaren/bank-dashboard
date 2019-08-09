@@ -29,7 +29,20 @@ var ITEM_ID = null;
 
 // Routes
 
-// trade public token for access token and store credentails
+// route GET api/plaid/accounts
+// Get all accounts linked with plaid for a specific user
+
+router.get(
+  "/accounts",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    Account.find({ userId: req.user.id })
+      .then(accounts => res.json(accounts))
+      .catch(err => console.log(err));
+  }
+);
+
+// trade public token for access token and store credentials in database
 
 router.post(
   "/accounts/add",
@@ -86,18 +99,7 @@ router.delete(
   }
 );
 
-// get all accounts linked
-
-router.get(
-  "/accounts",
-  passport.authenticate("jwt", { session: false }),
-  (req, res) => {
-    Account.find({ userId: req.user.id })
-      .then(accounts => res.json(accounts))
-      .catch(err => console.log(err));
-  }
-);
-
+// route POST api/plaid/accounts/transactions
 // Fetch transactions from past 30 days
 
 router.post(
@@ -108,25 +110,22 @@ router.post(
     const today = now.format("YYYY-MM-DD");
     const thirtyDaysAgo = now.subtract(30, "days").format("YYYY-MM-DD");
 
-    let transactions = [];
-
     const accounts = req.body;
 
-    if (accounts) {
-      accounts.forEach(account => {
-        ACCESS_TOKEN = account.access_token;
-        const institutionName = account.institutionName;
+    let transactions = [];
 
+    if (accounts) {
+      accounts.forEach(function(account) {
+        ACCESS_TOKEN = account.accessToken;
+        const institutionName = account.institutionName;
         client
           .getTransactions(ACCESS_TOKEN, thirtyDaysAgo, today)
-          .then(res => {
+          .then(response => {
             transactions.push({
               accountName: institutionName,
-              transactions: res.transactions
+              transactions: response.transactions
             });
-
-            //Don't send back response till all transactions have been added
-            if (transactions.length === accounts.length) {
+            if (transactions.length) {
               res.json(transactions);
             }
           })

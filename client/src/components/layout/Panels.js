@@ -28,8 +28,11 @@ class Panels extends React.Component {
   };
 
   render() {
+    const { accounts } = this.props;
     const { user } = this.props.auth;
     const { transactions } = this.props.plaid;
+
+    console.log("transactions:", transactions);
 
     return (
       <section>

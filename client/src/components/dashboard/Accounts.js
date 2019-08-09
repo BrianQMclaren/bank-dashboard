@@ -51,7 +51,7 @@ class Accounts extends React.Component {
               clientName="UNIBANK"
               env="sandbox"
               product={["transactions"]}
-              publicKey={process.env.REACT_APP_PUBLIC_KEY}
+              publicKey={"e3b9a451ef03d85716196f21f33e1f"}
               onExit={this.handleLogoutClick}
               onSuccess={this.handleOnSuccess}
               onScriptLoad={() => this.setState({ loaded: true })}

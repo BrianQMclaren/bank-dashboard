@@ -10,9 +10,48 @@
 
 ### Prerequisites
 
-Install Yarn (https://yarnpkg.com/en/)
 Install NPM (https://www.npmjs.com/) Install Node.js
 (https://nodejs.org/en/download/current/)
+
+### Configuration
+
+### MongoDB
+
+Add your own MONGOURI from mLAB database in config/keys.js
+
+```javascript
+module.exports = {
+  mongoURI: "YOUR_MONGO_URI_HERE",
+  secretOrKey: "secret"
+};
+```
+
+### Plaid
+
+Add add your own PLAID Creds to these files
+
+1. routes/api/plaid.js
+
+```javascript
+const PLAID_CLIENT_ID = "YOUR_CLIENT_ID";
+const PLAID_SECRET = "YOUR_SECRET";
+const PLAID_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+```
+
+2. client/src/components/dashboard/Accounts.js
+
+```javascript
+    <PlaidLink
+              className="plaid"
+              clientName="UNIBANK"
+              env="sandbox"
+              product={["transactions"]}
+              publicKey={"e3b9a451ef03d85716196f21f33e1f"}
+              onExit={this.handleLogoutClick}
+              onSuccess={this.handleOnSuccess}
+              onScriptLoad={() => this.setState({ loaded: true })}
+            >
+```
 
 ## Getting Started
 
@@ -23,25 +62,29 @@ Clone or download the project files from my repository
 
 git clone https://github.com/BrianQMclaren/Bank-Dashboard-App
 
-Run yarn install in your terminal to get all of the packages
+#### Run this cmd your terminal to get all of the packages for client and server
 
-yarn install
+npm install && npm run client-install
 
-Run the server by running npm start
+#### Run client & server concurrently
 
-yarn dev
+npm run dev
+
+#### Server runs on http://localhost:8080 and client on http://localhost:3000
 
 ## Built With
 
 - [React](https://reactjs.org/docs/hello-world.html) - The javascript library
   for building user interfaces
-- [Node](https://nodejs.org/en/about/) - Asynchronous event driven JavaScript
-  runtime
+- [Express] Backend JS Framework
+- [Node](https://nodejs.org/en/about/) - Asynchronous event driven JavaScript runtime
+- [Redux] Global state management
+- [MongoDB] NoSQL Database
 - [d3](https://d3js.org/) - Data driven documents
+- [Plaid] for bank transaction data
 - [Jest](https://facebook.github.io/jest/) - Test javascript code including
   react apps
 - [Babel](http://babeljs.io/) - Javascript complier
-- [Parcel](https://parceljs.org/) - Module Bundler
 
 ## Authors
 
