@@ -76,19 +76,19 @@ npm run dev
 
 - [React](https://reactjs.org/docs/hello-world.html) - The javascript library
   for building user interfaces
-- [Express] Backend JS Framework
+- [Express](https://expressjs.com/) Backend JS Framework
 - [Node](https://nodejs.org/en/about/) - Asynchronous event driven JavaScript runtime
-- [Redux] Global state management
-- [MongoDB] NoSQL Database
+- [Redux](https://redux.js.org/) Global state management
+- [MongoDB](https://www.mongodb.com/) NoSQL Database
 - [d3](https://d3js.org/) - Data driven documents
-- [Plaid] for bank transaction data
+- [Plaid](https://plaid.com/) for bank transaction data
 - [Jest](https://facebook.github.io/jest/) - Test javascript code including
   react apps
 - [Babel](http://babeljs.io/) - Javascript complier
 
 ## Authors
 
-- **Brian Mclaren**
+- **Brian McLaren**
 
 ## License
 
