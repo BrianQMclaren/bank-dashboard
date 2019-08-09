@@ -46,7 +46,7 @@ const PLAID_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
               clientName="UNIBANK"
               env="sandbox"
               product={["transactions"]}
-              publicKey={"e3b9a451ef03d85716196f21f33e1f"}
+              publicKey={"PLAID_PUBLIC_KEY"}
               onExit={this.handleLogoutClick}
               onSuccess={this.handleOnSuccess}
               onScriptLoad={() => this.setState({ loaded: true })}

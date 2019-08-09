@@ -28,8 +28,7 @@ class Panels extends React.Component {
   };
 
   render() {
-    const { accounts } = this.props;
-    const { user } = this.props.auth;
+    const { user, accounts } = this.props;
     const { transactions } = this.props.plaid;
 
     console.log("transactions:", transactions);
@@ -207,7 +206,6 @@ class Panels extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  auth: state.auth,
   plaid: state.plaid
 });
 

@@ -125,9 +125,9 @@ router.post(
               accountName: institutionName,
               transactions: response.transactions
             });
-            if (transactions.length) {
-              res.json(transactions);
-            }
+            // if (transactions.length) {
+            //   res.json(transactions);
+            // }
           })
           .catch(err => console.log(err));
       });
