@@ -50,7 +50,7 @@ class Accounts extends React.Component {
               className="plaid"
               clientName="UNIBANK"
               env="sandbox"
-              product={["transactions"]}
+              product={["auth", "transactions"]}
               publicKey={"e3b9a451ef03d85716196f21f33e1f"}
               onExit={this.handleLogoutClick}
               onSuccess={this.handleOnSuccess}

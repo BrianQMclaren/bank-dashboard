@@ -6,7 +6,7 @@ import Header from "../layout/Header";
 
 class Dashboard extends React.Component {
   render() {
-    const { accounts } = this.props;
+    const { user, accounts } = this.props;
     return (
       <div className="wrapper">
         <Navigation />
@@ -20,7 +20,7 @@ class Dashboard extends React.Component {
           contact="contacts"
         />
         <Header />
-        <Panels accounts={accounts} />
+        <Panels user={user} accounts={accounts} />
       </div>
     );
   }

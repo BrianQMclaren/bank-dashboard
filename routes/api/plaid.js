@@ -108,7 +108,7 @@ router.post(
   (req, res) => {
     const now = moment();
     const today = now.format("YYYY-MM-DD");
-    const thirtyDaysAgo = now.subtract(30, "days").format("YYYY-MM-DD");
+    const thirtyDaysAgo = now.subtract(15, "days").format("YYYY-MM-DD");
 
     const accounts = req.body;
 
@@ -125,9 +125,9 @@ router.post(
               accountName: institutionName,
               transactions: response.transactions
             });
-            // if (transactions.length) {
-            //   res.json(transactions);
-            // }
+            if (transactions) {
+              res.json(transactions);
+            }
           })
           .catch(err => console.log(err));
       });

@@ -31,7 +31,7 @@ class Panels extends React.Component {
     const { user, accounts } = this.props;
     const { transactions } = this.props.plaid;
 
-    console.log("transactions:", transactions);
+    console.log(transactions);
 
     return (
       <section>
@@ -109,28 +109,25 @@ class Panels extends React.Component {
               <h4>History</h4>
               <h4 className="active">today</h4>
               <h4>yesterday</h4>
-              <div className="transactions">
-                <div className="row">
-                  <p>Cafe Latte - Starbucks</p>
-                  <p>$5.89</p>
-                </div>
-                <div className="row">
-                  <p>Double Bacon Cheesburger - ShackShake</p>
-                  <p>$14.42</p>
-                </div>
-                <div className="row">
-                  <p>Iphone XR - Apple HQ</p>
-                  <p>$749.99</p>
-                </div>
-                <div className="row">
-                  <p>Amazon Prime - HBO</p>
-                  <p>$14.99</p>
-                </div>
-                <div className="row">
-                  <p>Project - Kickstarter</p>
-                  <p>$29.99</p>
-                </div>
-              </div>
+
+              {transactions.map(account => {
+                return account.transactions.map(transaction => {
+                  return (
+                    <>
+                      <div
+                        key={transaction.transaction_id}
+                        className="transactions"
+                      >
+                        <div className="row">
+                          <p>{transaction.name}</p>
+                          <p>${transaction.amount}</p>
+                        </div>
+                      </div>
+                    </>
+                  );
+                });
+              })}
+
               <button
                 className="btn--info view-button"
                 type="button"

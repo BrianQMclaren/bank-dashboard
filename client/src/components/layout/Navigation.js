@@ -49,12 +49,12 @@ class Navigation extends React.Component {
             <img src={notification} alt="notification icon" />
           </li>
           <li className="logout">
+            Logout
             <img
               onClick={this.handleLogoutClick}
               src={logout}
               alt="logout icon"
             />
-            Logout
           </li>
         </ul>
       </nav>
