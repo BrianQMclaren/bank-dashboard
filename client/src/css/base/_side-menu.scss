@@ -22,26 +22,22 @@
     border-radius: 50%;
     width: 25px;
     height: 25px;
-    padding: 4%;
+    padding: 0 0.25rem;
   }
   .active path {
     fill: #fff !important;
   }
 }
 
-@media (min-width: 450px) {
+@media (min-width: 368px) {
   .side-menu {
-    float: none;
-    width: 100%;
-    height: auto;
-    .sidebar {
-      min-height: 0;
-    }
+    display: none;
   }
 }
 
 @media (min-width: 860px) {
   .side-menu {
+    display: block;
     float: left;
     width: 10%;
     height: 800px;

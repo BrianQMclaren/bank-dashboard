@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header>
+    <header className="sub-nav">
       <h3>Dashboard</h3>
       <p>You are in the main panel</p>
       <button

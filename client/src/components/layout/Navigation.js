@@ -35,7 +35,7 @@ class Navigation extends React.Component {
           value={this.state.query}
           placeholder="Search"
         />
-        <Link to="/transfer">
+        <Link className="transfer" to="/transfer">
           <button className="btn--default" type="button" name="button">
             Money Transfer
           </button>

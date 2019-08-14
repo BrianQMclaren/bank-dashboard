@@ -10,7 +10,16 @@
   h1 {
     color: $black;
   }
-  button {
+}
+
+@media (min-width: 450px) {
+  .landing button {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .landing button {
     width: 20%;
   }
 }

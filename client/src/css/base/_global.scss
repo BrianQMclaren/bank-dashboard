@@ -29,12 +29,12 @@ h4 {
   display: inline-block;
 }
 p {
-  font-size: 1.1em;
+  font-size: 1.1rem;
   color: $darkGrey;
 }
 nav {
   text-align: center;
-  padding: 1em;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,31 +46,26 @@ ul {
   list-style: none;
   padding: 0;
 }
-ul li {
-  padding: 0.5em;
-}
+
 input[type="text"] {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.04);
   color: $grey;
-  padding: 0 0.6em;
+  padding: 0 0.6rem;
   border: none;
-  border-radius: 2em;
+  border-radius: 2rem;
   outline: none;
   height: 29px;
-  margin-bottom: 1em;
-  margin: 0 auto 0 4em;
-  width: 25%;
 }
 
 button {
   outline: none;
   background-color: $purple;
   color: white;
-  font-size: 0.78em;
-  margin-top: 1.65em;
-  margin-right: 0.4em;
-  border-radius: 2em;
-  padding: 0.9em 2em;
+  font-size: 0.78rem;
+  margin-top: 1.65rem;
+  margin-right: 0.4rem;
+  border-radius: 2rem;
+  padding: 0.9rem 2rem;
   cursor: pointer;
   text-transform: uppercase;
 }
@@ -86,9 +81,8 @@ button a {
   text-decoration: none;
 }
 header p {
-  font-size: 0.7em;
-  margin-top: 0;
-  margin-left: 3.5em;
+  font-size: 0.7rem;
+  margin-left: 3.5rem;
   display: inline-block;
 }
 header {
@@ -104,14 +98,14 @@ header {
 .wrapper {
   width: 100%;
   max-width: 1150px;
-  border-radius: 0.35em;
+  border-radius: 0.35rem;
   overflow: hidden;
   background: $background;
   box-shadow: 0 0 26px rgba(0, 0, 0, 0.13);
 }
 .logo {
   color: $black;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   text-decoration: none;
 }
 
@@ -124,7 +118,7 @@ header {
   display: flex;
   align-items: center;
   img {
-    padding: 1em;
+    padding: 1rem;
   }
 }
 
@@ -132,44 +126,80 @@ header {
   background: white;
 }
 
-@media (min-width: 450px) {
-  .wrapper {
-    margin: 0;
-  }
+@media (min-width: 368px) {
   ul input[type="text"] {
     width: 100%;
   }
-  header {
-    h3 {
-      margin-left: 0;
-      margin-bottom: 0;
-    }
-  }
+
   nav {
     height: auto;
     text-align: center;
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .logo {
+      font-size: 1.5rem;
+    }
+    .transfer {
+      display: none;
+    }
+    input {
+      width: 80%;
+      margin: 2rem;
+    }
+  }
+  .navbar {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .wrapper {
+    margin: 0;
+  }
+
+  .sub-nav {
+    display: none;
   }
 }
 
 @media (min-width: 860px) {
   header h3 {
     text-align: left;
-    margin-left: 8.25em;
+    margin-left: 8.25rem;
     margin-bottom: 0;
   }
   ul {
     margin: 0;
     li {
       display: inline-block;
-      padding: 1.25em;
+      padding: 1.25rem;
     }
   }
 
   nav {
     height: 85px;
     background: white;
+    flex-direction: row;
+    input {
+      margin: 0 auto 0 4rem;
+      width: 50%;
+    }
+    .logo {
+      font-size: 0.9rem;
+    }
+    .transfer {
+      display: block;
+      width: 50%;
+    }
+  }
+  .navbar {
+    justify-content: flex-end;
   }
   .wrapper {
-    margin: 2.5em auto;
+    margin: 2.5rem auto;
+  }
+  .sub-nav {
+    display: block;
   }
 }

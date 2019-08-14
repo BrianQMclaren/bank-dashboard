@@ -62,7 +62,7 @@ class Panels extends React.Component {
             </div>
             <div className="customer-account">
               <h3 className="name">{user.name}</h3>
-              <ul>
+              <ul className="customer-acc">
                 <li>Card:</li>
                 <li>Card Type:</li>
                 <li>Account:</li>

@@ -27,10 +27,6 @@
   margin: 0.75em 1em;
   padding: 0.25em;
 }
-.card-button {
-  display: flex;
-  justify-content: flex-end;
-}
 
 .year-links {
   float: right;
@@ -47,9 +43,6 @@
   border-bottom: 1px solid;
   padding-bottom: 5px;
   color: $plum;
-}
-
-@media (min-width: 450px) {
 }
 
 @media (min-width: 860px) {
