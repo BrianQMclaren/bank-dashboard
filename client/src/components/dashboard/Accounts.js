@@ -4,7 +4,6 @@ import { logoutUser } from "../../actions/authActions";
 import { getAccounts, addAccount } from "../../actions/accountActions";
 import Dashboard from "./Dashboard";
 import PlaidLink from "react-plaid-link";
-// import Panels from "../layout/Panels";
 
 class Accounts extends React.Component {
   componentDidMount() {
@@ -40,7 +39,7 @@ class Accounts extends React.Component {
     } else {
       // user has no linked accounts
       dashboardContent = (
-        <div className="wrapper">
+        <div className="plaid-landing">
           <h3>
             Welcome, <b>{user.name}</b>
           </h3>
@@ -58,7 +57,10 @@ class Accounts extends React.Component {
             >
               Open Link and connect your bank!
             </PlaidLink>
-            <button onClick={this.onLogoutClick} className="form-logout-button">
+            <button
+              onClick={this.onLogoutClick}
+              className="form-logout-button plaid"
+            >
               Logout
             </button>
           </>

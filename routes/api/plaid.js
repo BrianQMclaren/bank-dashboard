@@ -99,6 +99,38 @@ router.delete(
   }
 );
 
+// route POST api/plaid/accounts/auth
+// Fetch auth account numbers
+
+router.post(
+  "/accounts/auth",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    let auth = [];
+
+    const accounts = req.body;
+
+    if (accounts) {
+      accounts.forEach(function(account) {
+        ACCESS_TOKEN = account.accessToken;
+        const institutionName = account.institutionName;
+        client
+          .getAuth(ACCESS_TOKEN)
+          .then(response => {
+            auth.push({
+              accountName: institutionName,
+              auth: response.accounts
+            });
+            if (auth.length === accounts.length) {
+              res.json(auth);
+            }
+          })
+          .catch(err => console.log(err));
+      });
+    }
+  }
+);
+
 // route POST api/plaid/accounts/transactions
 // Fetch transactions from past 30 days
 
@@ -125,7 +157,7 @@ router.post(
               accountName: institutionName,
               transactions: response.transactions
             });
-            if (transactions) {
+            if (transactions.length === accounts.length) {
               res.json(transactions);
             }
           })

@@ -12,6 +12,22 @@
   }
 }
 
+.plaid-landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.plaid {
+  background-color: #922786 !important;
+  padding: 20px !important;
+  color: $white !important;
+  border-radius: 2px;
+}
+
 @media (min-width: 450px) {
   .landing button {
     width: 80%;

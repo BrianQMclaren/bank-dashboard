@@ -3,7 +3,11 @@ import "core-js/stable";
 import "regenerator-runtime/runtime";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { getTransactions, addAccount } from "../../actions/accountActions";
+import {
+  getTransactions,
+  addAccount,
+  getAuth
+} from "../../actions/accountActions";
 import TopPanel from "./TopPanel";
 import BottomPanel from "./BottomPanel";
 import LineChart from "../dashboard/LineChart";
@@ -14,6 +18,7 @@ class Panels extends React.Component {
   componentDidMount() {
     const { accounts } = this.props;
     this.props.getTransactions(accounts);
+    this.props.getAuth(accounts);
   }
 
   //add account
@@ -28,10 +33,12 @@ class Panels extends React.Component {
   };
 
   render() {
-    const { user, accounts } = this.props;
+    const { user } = this.props;
     const { transactions } = this.props.plaid;
+    const { auth } = this.props.plaid;
 
-    console.log(transactions);
+    console.log("transactions:", transactions);
+    console.log("auth:", auth);
 
     return (
       <section>
@@ -39,7 +46,16 @@ class Panels extends React.Component {
           <TopPanel>
             <h3>summary</h3>
             <p>balance</p>
-            <p className="balance">10,346.78 USD</p>
+            <>
+              {auth.map(account => {
+                return (
+                  <p key={account.auth[0].account_id} className="balance">
+                    {account.auth[0].balances.current} USD
+                  </p>
+                );
+              })}
+            </>
+
             <div className="line">
               <LineChart />
             </div>
@@ -109,11 +125,10 @@ class Panels extends React.Component {
               <h4>History</h4>
               <h4 className="active">today</h4>
               <h4>yesterday</h4>
-
-              {transactions.map(account => {
-                return account.transactions.map(transaction => {
-                  return (
-                    <>
+              <>
+                {transactions.map(account => {
+                  return account.transactions.map(transaction => {
+                    return (
                       <div
                         key={transaction.transaction_id}
                         className="transactions"
@@ -123,11 +138,10 @@ class Panels extends React.Component {
                           <p>${transaction.amount}</p>
                         </div>
                       </div>
-                    </>
-                  );
-                });
-              })}
-
+                    );
+                  });
+                })}
+              </>
               <button
                 className="btn--info view-button"
                 type="button"
@@ -208,5 +222,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { getTransactions, addAccount }
+  { getTransactions, addAccount, getAuth }
 )(Panels);

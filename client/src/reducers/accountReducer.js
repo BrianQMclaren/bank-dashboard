@@ -4,12 +4,14 @@ import {
   GET_ACCOUNTS,
   ACCOUNTS_LOADING,
   GET_TRANSACTIONS,
-  TRANSACTIONS_LOADING
+  TRANSACTIONS_LOADING,
+  GET_AUTH
 } from "../actions/types";
 
 const initState = {
   accounts: [],
   transactions: [],
+  auth: [],
   accountsLoading: false,
   transactionsLoading: false
 };
@@ -49,6 +51,11 @@ export default function(state = initState, action) {
         ...state,
         transactions: action.payload,
         transactionsLoading: false
+      };
+    case GET_AUTH:
+      return {
+        ...state,
+        auth: action.payload
       };
     default:
       return state;

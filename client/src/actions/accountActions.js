@@ -6,7 +6,8 @@ import {
   DELETE_ACCOUNT,
   GET_ACCOUNTS,
   GET_TRANSACTIONS,
-  TRANSACTIONS_LOADING
+  TRANSACTIONS_LOADING,
+  GET_AUTH
 } from "./types";
 
 //add account
@@ -82,4 +83,23 @@ export const setTransactionsLoading = () => {
   return {
     type: TRANSACTIONS_LOADING
   };
+};
+
+// Get Auth
+
+export const getAuth = plaidData => dispatch => {
+  axios
+    .post("/api/plaid/accounts/auth", plaidData)
+    .then(res =>
+      dispatch({
+        type: GET_AUTH,
+        payload: res.data
+      })
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_AUTH,
+        payload: null
+      })
+    );
 };
