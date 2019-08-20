@@ -14,20 +14,14 @@
     padding-top: 0.25rem;
   }
   ul {
-    -moz-column-count: 2;
-    -moz-column-gap: 10px;
-    -webkit-column-count: 2;
-    -webkit-column-gap: 10px;
-    column-count: 2;
-    column-gap: 10px;
-    width: 100%;
-    padding-left: 1rem;
-    float: left;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 9rem;
   }
   ul li {
     font-size: 0.75rem;
     padding: 0.25rem;
-    width: 100%;
   }
   a {
     text-decoration: none;
@@ -153,11 +147,14 @@ circle {
   position: relative;
   bottom: 40px;
 }
+.customer-account-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 .cus-credit-card {
-  float: right;
   width: 40%;
-  position: relative;
-  bottom: 40px;
+  padding-left: 3rem;
 }
 
 @media (min-width: 368px) {

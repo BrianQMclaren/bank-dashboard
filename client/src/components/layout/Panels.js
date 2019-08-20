@@ -78,27 +78,36 @@ class Panels extends React.Component {
             </div>
             <div className="customer-account">
               <h3 className="name">{user.name}</h3>
-              <ul className="customer-acc">
-                <li>Card:</li>
-                <li>Card Type:</li>
-                <li>Account:</li>
-                <li>Card Number:</li>
-                <li>Expiry date:</li>
-                <li>Status:</li>
-                <li>Blocked:</li>
-                <li>Debit</li>
-                <li className="cus-accnt">Debit MasterCard PayPass</li>
-                <li className="cus-accnt">Saving Account</li>
-                <li className="cus-accnt">687676078977****</li>
-                <li className="cus-accnt">31.03.2019</li>
-                <li className="cus-accnt">Active</li>
-                <li className="cus-accnt">743.00 USD</li>
-              </ul>
-              <img
-                className="cus-credit-card"
-                src={credit}
-                alt="visa credit card"
-              />
+              <div className="customer-account-card">
+                {auth.map(account => {
+                  return (
+                    <ul
+                      key={account.auth[0].account_id}
+                      className="customer-acc"
+                    >
+                      <li>AccountName:</li>
+                      <li>Card Type:</li>
+                      <li>Account:</li>
+                      <li>Card Number:</li>
+                      <li>Expiry date:</li>
+                      <li>Status:</li>
+                      <li>{account.accountName}</li>
+                      <li className="cus-accnt">
+                        {account.auth[0].official_name}
+                      </li>
+                      <li className="cus-accnt">{account.auth[0].name}</li>
+                      <li className="cus-accnt">687676078977****</li>
+                      <li className="cus-accnt">31.03.2019</li>
+                      <li className="cus-accnt">Active</li>
+                    </ul>
+                  );
+                })}
+                <img
+                  className="cus-credit-card"
+                  src={credit}
+                  alt="visa credit card"
+                />
+              </div>
             </div>
 
             <div className="acc-options">
