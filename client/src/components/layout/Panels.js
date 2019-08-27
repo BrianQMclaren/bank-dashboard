@@ -37,9 +37,6 @@ class Panels extends React.Component {
     const { transactions } = this.props.plaid;
     const { auth } = this.props.plaid;
 
-    console.log("transactions:", transactions);
-    console.log("auth:", auth);
-
     return (
       <section>
         <div className="top-dashboard">
